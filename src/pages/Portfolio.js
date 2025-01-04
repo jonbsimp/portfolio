@@ -7,9 +7,7 @@ export default function Portfolio() {
             <h2>Portfolio</h2>
             <p>Here are some of the projects I've worked on:</p>
             <ul>
-                <li>
-      
-                </li>
+                <li>TEST</li>
             </ul>
         </div>
     );
