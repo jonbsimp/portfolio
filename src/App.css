@@ -1,0 +1,109 @@
+.about-card {
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.about {
+    text-align: center;
+    padding: 20px;
+}
+
+.about-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #333;
+    margin: 15px 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    font-family: 'Arial', sans-serif;
+}
+
+.vertical-timeline-element-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.vertical-timeline-element-subtitle {
+    font-size: 1rem;
+    color: gray;
+}
+
+.ant-btn-primary {
+    background: #1890ff;
+    border-color: #1890ff;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.ant-btn-primary:hover {
+    background: #40a9ff;
+    border-color: #40a9ff;
+}
+
+.vertical-timeline-element--work:hover,
+.vertical-timeline-element--education:hover {
+  transform: scale(1.05);
+  z-index: 10; /* Ensures the magnified element is above others */
+}
+
+.vertical-timeline-element-title,
+.vertical-timeline-element-subtitle {
+  transition: transform 0.3s ease; /* Optional smooth transition for title and subtitle */
+}
+
+.about {
+    background-color: #F5F5F5;
+}
+
+/* CSS for Video Header Component */
+
+/* Add an overlay to darken the video */
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Darken the video with transparency */
+    z-index: 1; /* Ensure the overlay is above the video but below the text */
+  }
+  
+  /* Centering the text overlay */
+  .header-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2; /* Ensure the text stays on top of the video */
+  }
+  
+  /* Styling for each header text */
+  .header-text {
+    color: rgba(216, 216, 216, 0.9);  /* Dusty white color with some opacity */
+    font-family: 'Poppins', sans-serif;  /* Fun and playful font */
+    font-weight: 600;  /* Semi-bold weight */
+    margin: 0.5em 0;
+    line-height: 1.3;
+  }
+  
+  /* Optional: Adjust styling for the background video */
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;  /* Keep the video behind the text */
+  }
+  
+  /* Add the Poppins font from Google Fonts */
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+  
