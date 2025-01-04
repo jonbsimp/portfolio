@@ -67,10 +67,10 @@ export default function Timeline() {
         { date: '2009 - 2014', title: 'Graduated from the University of Kentucky', subtitle: 'Lexington, KY', description: 'B.S. in Economics and International Business', type: 'education', icon: <FaGraduationCap /> },
     ];
 
-  const animationVariants = {
-    hidden: { opacity: 0, x: 50 },
-    visible: { opacity: 1, x: 0 },
-  };
+//   const animationVariants = {
+//     hidden: { opacity: 0, x: 50 },
+//     visible: { opacity: 1, x: 0 },
+//   };
 
   const loadMoreItems = () => {
     setVisibleItems((prevItems) => prevItems + 2);
