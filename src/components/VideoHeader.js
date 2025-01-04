@@ -29,6 +29,8 @@ export default function VideoHeader() {
       <div className="header-overlay">
         <h1 className="header-text">Jon Simpson</h1>
         <br></br>
+        <hr></hr>
+        <br></br>
         <h2 className="header-text">Software Manager, World Traveler, Dog Lover</h2>
         <h3 className="header-text">When I'm not working I morph into a yogi.</h3>
       </div>
