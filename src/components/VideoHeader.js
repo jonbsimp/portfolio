@@ -35,6 +35,7 @@ export default function VideoHeader() {
         <h2 className="header-text">Software Manager, World Traveler, Animal Lover.</h2>
         <h4 className="header-text"><i>When I'm not writing code I morph into a yogi</i></h4>
       </div>
+     
     </Content>
   );
 }

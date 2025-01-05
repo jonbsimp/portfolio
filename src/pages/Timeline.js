@@ -9,7 +9,6 @@ import { motion } from 'framer-motion';
 
 const { Content } = Layout;
 
-// VerticalTimeline Component
 const VerticalTimeline = ({
   animate = true,
   className = '',
@@ -53,59 +52,96 @@ VerticalTimeline.propTypes = {
 
 export default function Timeline() {
   const [visibleItems, setVisibleItems] = useState(2);
+  const [hoveredIndex, setHoveredIndex] = useState(null);
 
-  // const experiences = [
-  //   {
-  //     date: '2024 - 2024',
-  //     title: 'Solution Manager',
-  //     subtitle: 'Jitterbit | Remote',
-  //     description: 'Solution Architecture, Client Relationship Management, Pre-Sales Expertise, Cross-Functional Team Leadership, Project Management',
-  //     type: 'work',
-  //     icon: <FaBriefcase />,
-  //     logo: '/assets/jitterbit-logo.png', // Add logo path here
-  //   },
-  //   {
-  //     date: '2023 - 2024',
-  //     title: 'Application Architect',
-  //     subtitle: 'Jitterbit | Remote',
-  //     description: 'System Architecture Design, Integration Expertise, End-to-End Solution Development, Leadership and Mentoring, Technical Strategy and Planning',
-  //     type: 'work',
-  //     icon: <FaBriefcase />,
-  //     logo: '/assets/jitterbit-logo.png',
-  //   },
-  //   {
-  //     date: '2020 - 2022',
-  //     title: 'Senior Application Developer',
-  //     subtitle: 'Zudy | Remote',
-  //     description: 'Full-Stack Development, Low-Code Platform Development, JavaScript Frameworks, Database Design and Integration, Agile Methodologies',
-  //     type: 'work',
-  //     icon: <FaBriefcase />,
-  //     logo: '/assets/zudy-logo.png',
-  //   },
-  //   {
-  //     date: '2019 - 2020',
-  //     title: 'Software Developer',
-  //     subtitle: 'The 5th Ingredient | San Diego, CA',
-  //     description: 'Linux, Apache, MySQL, PHP, CodeIgniter, JQuery, HTML, and CSS',
-  //     type: 'work',
-  //     icon: <FaBriefcase />,
-  //     logo: '/assets/5th-ingredient-logo.png',
-  //   },
+  const experiences = [
     
-  // ];
-
-const experiences = [
-    // { date: '2025 - present', title: 'MBA Canditate', subtitle: '', description: '', type: 'education', icon: <FaGraduationCap /> },
-    { date: '2024 - 2024', title: 'Solution Manager', subtitle: 'Jitterbit | Remote', description: 'Solution Architecture, Client Relationship Management, Pre-Sales Expertise, Cross-Functional Team Leadership, Project Management', type: 'work', icon: <FaBriefcase />, logo: '/assets/jitterbit-logo.png', },
-    { date: '2023 - 2024', title: 'Application Architect', subtitle: 'Jitterbit | Remote', description: 'System Architecture Design, Integration Expertise, End-to-End Solution Development, Leadership and Mentoring, Technical Strategy and Planning', type: 'work', icon: <FaBriefcase /> , logo: '/assets/jitterbit-logo.png',},
-    { date: '2020 - 2022', title: 'Senior Application Developer', subtitle: 'Zudy | Remote', description: 'Full-Stack Development, Low-Code Platform Development, JavaScript Frameworks, Database Design and Integration, Agile Methodologies', type: 'work', icon: <FaBriefcase />, logo: '/assets/zudy-logo.png', },
-    { date: '2019 - 2020', title: 'Software Developer', subtitle: 'The 5th Ingredient | San Diego, CA', description: 'Linux, Apache, MySQL, PHP, CodeIgniter, JQuery, HTML, and CSS', type: 'work', icon: <FaBriefcase />, logo: '/assets/5th-ingredient-logo.png', },
-    { date: '2019 - 2019', title: 'Software Developer Intern', subtitle: 'EMOTIV | San Diego, CA', description: 'React, Python, Django, Docker, D3, WebSockets', type: 'work', icon: <FaBriefcase />, logo: '/assets/emotiv_logo.jpeg', },
-    { date: '2018 - 2018', title: 'Full-Stack Development Bootcamp', subtitle: 'LEARN Academy | San Diego, CA', description: 'Ruby on Rails, Javascript, React, Git, PostgreSQL,', type: 'education', icon: <FaGraduationCap /> , logo: '/assets/learn-academy-logo.jpeg',},
-    { date: '2014 - 2018', title: 'Working Holiday Visa', subtitle: 'Seeka Limited | Australia & New Zealand', description: 'Leadership and Management, Team Collaboration, Multitasking and Adaptability, Cultural Sensitivity and Communication', type: 'work', icon: <FaBriefcase />, logo: '/assets/seeka-logo.avif', },
-    { date: '2012', title: 'Universidad Latina de Costa Rica', subtitle: 'Heredia, Costa Rica', description: 'Spanish, International Business Management', type: 'education', icon: <FaGraduationCap />, logo: '/assets/ulatina-logo.png',},
-    { date: '2009 - 2014', title: 'Graduated from the University of Kentucky', subtitle: 'Lexington, KY', description: 'B.S. in Economics and International Business', type: 'education', icon: <FaGraduationCap />, logo: '/assets/uk-logo.png', },
-];
+    { 
+      date: '2024 - 2024', 
+      title: 'Solution Manager', 
+      subtitle: 'Jitterbit | Remote', 
+      description: 'Solution Architecture, Client Relationship Management, Pre-Sales Expertise, Cross-Functional Team Leadership, Project Management', 
+      type: 'work', icon: <FaBriefcase />, 
+      logo: '/assets/jitterbit-logo.png', 
+      icons: [] 
+    },
+    { 
+      date: '2023 - 2024', 
+      title: 'Application Architect', 
+      subtitle: 'Jitterbit | Remote', 
+      description: 'System Architecture Design, Integration Expertise, End-to-End Solution Development, Leadership and Mentoring, Technical Strategy and Planning', 
+      type: 'work', icon: <FaBriefcase />, logo: '/assets/jitterbit-logo.png', 
+      icons: [] 
+    },
+    { 
+      date: '2020 - 2022', 
+      title: 'Senior Application Developer', 
+      subtitle: 'Zudy | Remote', 
+      description: 'Full-Stack Development, Low-Code Platform Development, JavaScript Frameworks, Database Design and Integration, Agile Methodologies', 
+      type: 'work', 
+      icon: <FaBriefcase />, 
+      logo: '/assets/zudy-logo.png', 
+      icons: ['/assets/sql.png', '/assets/react.png', '/assets/html.png', '/assets/css.svg', '/assets/snowflake.png',] 
+    },
+    { 
+      date: '2019 - 2020', 
+      title: 'Software Developer', 
+      subtitle: 'The 5th Ingredient | San Diego, CA', 
+      description: 'Developed software for managing beer and kombucha brewery processes using the LAMP stack (PHP, MySQL, JavaScript, HTML, CSS) on the CodeIgniter framework.', 
+      type: 'work', 
+      icon: <FaBriefcase />, 
+      logo: '/assets/5th-ingredient-logo.png', 
+      icons: ['/assets/codeigniter.svg', '/assets/mysql.png','/assets/php.png', '/assets/jquery.png', '/assets/html.png', '/assets/css.svg', '/assets/git.png',] 
+    },
+    { 
+      date: '2019 - 2019', 
+      title: 'Software Developer Intern', 
+      subtitle: 'EMOTIV | San Diego, CA', 
+      description: 'Developed a Spotify playlist application that dynamically added or removed songs in real time based on brainwave data from an EEG headset and user performance metrics.', 
+      type: 'work', icon: <FaBriefcase />, 
+      logo: '/assets/emotiv_logo.jpeg', 
+      icons: ['/assets/spotify.png', '/assets/react.png', '/assets/python.png','/assets/docker.webp', '/assets/d3.png', '/assets/websocket.png',] 
+    },
+    { 
+      date: '2018 - 2018', 
+      title: 'Full-Stack Development Bootcamp', 
+      subtitle: 'LEARN Academy | San Diego, CA', 
+      description: 'Teaching Assistant for the Jumpstart Program, where I taught students foundational front-end web development concepts using JavaScript, HTML, and CSS in 3-day intensive courses', 
+      type: 'education', 
+      icon: <FaGraduationCap />, 
+      logo: '/assets/learn-academy-logo.jpeg', 
+      icons: ['/assets/postgresql.png', '/assets/Rails.png', '/assets/ruby.png', '/assets/javascript.webp', '/assets/react.png', '/assets/html.png', '/assets/css.svg'], 
+    },
+    { 
+      date: '2014 - 2018', 
+      title: 'Working Holiday Visa', 
+      subtitle: 'Seeka Limited | Australia & New Zealand', 
+      description: 'Leadership and Management, Team Collaboration, Multitasking and Adaptability, Cultural Sensitivity and Communication', 
+      type: 'work', 
+      icon: <FaBriefcase />, 
+      logo: '/assets/seeka-logo.avif', 
+      icons: [] 
+    },
+    { 
+      date: '2012', 
+      title: 'Universidad Latina de Costa Rica', 
+      subtitle: 'Heredia, Costa Rica', 
+      description: 'Spanish, International Business Management', 
+      type: 'education', icon: <FaGraduationCap />, 
+      logo: '/assets/ulatina-logo.png', 
+      icons: [] 
+    },
+    { 
+      date: '2009 - 2014', 
+      title: 'Graduated from the University of Kentucky', 
+      subtitle: 'Lexington, KY', 
+      description: 'B.S. in Economics and International Business', 
+      type: 'education', 
+      icon: <FaGraduationCap />, 
+      logo: '/assets/uk-logo.png', 
+      icons: [] 
+    },
+  ];
 
   const loadMoreItems = () => {
     setVisibleItems((prevItems) => prevItems + 2);
@@ -129,6 +165,8 @@ const experiences = [
               visible: { opacity: 1, x: 0 },
             }}
             style={{ marginBottom: '40px' }}
+            onMouseEnter={() => setHoveredIndex(index)}
+            onMouseLeave={() => setHoveredIndex(null)}
           >
             <VerticalTimelineElement
               className={`vertical-timeline-element--${exp.type}`}
@@ -147,7 +185,6 @@ const experiences = [
               }}
               position={index % 2 === 0 ? 'left' : 'right'}
             >
-              {/* Title and Logo layout */}
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <div>
                   <h3 className="vertical-timeline-element-title">{exp.title}</h3>
@@ -162,12 +199,23 @@ const experiences = [
                 )}
               </div>
               <p>{exp.description}</p>
+
+              <br></br>
+
+              {/* Display icons only on hover */}
+              {hoveredIndex === index && (
+                <div style={{ display: 'flex', marginTop: '10px', gap: '8px', justifyContent: 'flex-start' }}>
+                  {exp.icons.map((icon, idx) => (
+                    <div key={idx} style={{ fontSize: '20px', color: exp.type === 'education' ? 'rgb(233, 30, 99)' : 'rgb(33, 150, 243)' }}>
+                      <img src={icon} style={{ width: '40px', height: '40px', objectFit: 'contain' }} alt={`icon-${idx}`} />
+                    </div>
+                  ))}
+                </div>
+              )}
             </VerticalTimelineElement>
-            
           </motion.div>
         ))}
       </VerticalTimeline>
-
 
       <div style={{ textAlign: 'center', marginTop: '20px' }}>
         {visibleItems > 2 && (

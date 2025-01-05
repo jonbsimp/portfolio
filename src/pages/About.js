@@ -41,6 +41,8 @@ export default function About() {
                         </div>
                     </Col>
                 </Row>
+                <br></br>
+                <br></br>
             </Card>
         </Content>
     );
