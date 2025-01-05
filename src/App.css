@@ -107,3 +107,63 @@ body {
   /* Add the Poppins font from Google Fonts */
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
   
+
+  /* General Footer Styles */
+.footer {
+    background-color: #001628; /* Dark blue background */
+    color: #dcdcdc; /* Dusty white text */
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+    margin-top: 50px; /* Adds space above the footer */
+  }
+  
+  /* Footer content styles */
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+  }
+  
+  /* Footer Text */
+  .footer-text {
+    margin: 5px 0;
+    font-family: 'Arial', sans-serif;
+    font-weight: 400;
+  }
+  
+  /* Social Links */
+  .footer-socials {
+    margin-top: 10px;
+  }
+  
+  .footer-link {
+    color: #dcdcdc;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-link:hover {
+    color: #ffcc00; /* Gold color on hover */
+  }
+  
+  /* Responsive styling */
+  @media (max-width: 768px) {
+    .footer {
+      padding: 15px;
+    }
+    
+    .footer-text {
+      font-size: 14px;
+    }
+  
+    .footer-link {
+      margin: 0 10px;
+    }
+  }
+  

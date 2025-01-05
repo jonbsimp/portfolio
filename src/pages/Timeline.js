@@ -56,14 +56,14 @@ export default function Timeline() {
     const [visibleItems, setVisibleItems] = useState(2);  
 
     const experiences = [
-        { date: '2025 - present', title: 'MBA Canditate', subtitle: '', description: '', type: 'education', icon: <FaGraduationCap /> },
-        { date: '2024 - 2024', title: 'Solution Manager', subtitle: 'Jitterbit', description: 'SQL', type: 'work', icon: <FaBriefcase /> },
-        { date: '2023 - 2024', title: 'Application Architect', subtitle: 'Jitterbit', description: 'SQL', type: 'work', icon: <FaBriefcase /> },
-        { date: '2020 - 2022', title: 'Senior Application Developer', subtitle: 'Zudy', description: 'React, JavaScript, SQL, Low-Code App development', type: 'work', icon: <FaBriefcase /> },
+        // { date: '2025 - present', title: 'MBA Canditate', subtitle: '', description: '', type: 'education', icon: <FaGraduationCap /> },
+        { date: '2024 - 2024', title: 'Solution Manager', subtitle: 'Jitterbit', description: 'Solution Architecture, Client Relationship Management, Pre-Sales Expertise, Cross-Functional Team Leadership, Project Management', type: 'work', icon: <FaBriefcase /> },
+        { date: '2023 - 2024', title: 'Application Architect', subtitle: 'Jitterbit', description: 'System Architecture Design, Integration Expertise, End-to-End Solution Development, Leadership and Mentoring, Technical Strategy and Planning', type: 'work', icon: <FaBriefcase /> },
+        { date: '2020 - 2022', title: 'Senior Application Developer', subtitle: 'Zudy', description: 'Full-Stack Development, Low-Code Platform Development, JavaScript Frameworks, Database Design and Integration, Agile Methodologies', type: 'work', icon: <FaBriefcase /> },
         { date: '2019 - 2020', title: 'Software Developer', subtitle: 'The 5th Ingredient', description: 'Linux, Apache, MySQL, PHP, CodeIgniter, JQuery, HTML, and CSS', type: 'work', icon: <FaBriefcase /> },
         { date: '2019 - 2019', title: 'Software Developer Intern', subtitle: 'EMOTIV | San Diego, CA', description: 'React, Django, Python, D3, WebSockets', type: 'work', icon: <FaBriefcase /> },
         { date: '2018 - 2018', title: 'LEARN Academy', subtitle: 'San Diego, CA', description: 'Full-Stack Development Bootcamp', type: 'education', icon: <FaGraduationCap /> },
-        { date: '2014 - 2018', title: 'Working Holiday', subtitle: 'Australia and New Zealand', description: 'Bartender in Sydney, Supervisor in Kiwi Fruit operations', type: 'work', icon: <FaBriefcase /> },
+        { date: '2014 - 2018', title: 'Working Holiday Visa', subtitle: 'Australia and New Zealand', description: 'Bartender in Sydney, Supervisor in Kiwi Fruit operations', type: 'work', icon: <FaBriefcase /> },
         { date: '2009 - 2014', title: 'Graduated from the University of Kentucky', subtitle: 'Lexington, KY', description: 'B.S. in Economics and International Business', type: 'education', icon: <FaGraduationCap /> },
     ];
 
@@ -145,12 +145,12 @@ export default function Timeline() {
       <div style={{ textAlign: 'center', marginTop: '20px' }}>
 
       {visibleItems > 2 && (
-          <Button type="default" onClick={loadLessItems} style={{ marginRight: '10px', backgroundColor: 'white', borderColor: '#001628', color: '#001628' }}>
+          <Button type="default" onClick={loadLessItems} style={{ marginRight: '10px', backgroundColor: 'white', borderColor: '#2096F3', color: '#2096F3' }}>
             Load Less
           </Button>
         )}
         {visibleItems < experiences.length && (
-          <Button type="primary" onClick={loadMoreItems} style={{ marginRight: '10px', backgroundColor: '#001628', borderColor: '#001628', color: '#fff' }}>
+          <Button type="primary" onClick={loadMoreItems} style={{ marginRight: '10px', backgroundColor: '#2096F3', borderColor: '#2096F3', color: '#fff' }}>
             Load More
           </Button>
         )}

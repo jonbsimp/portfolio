@@ -22,6 +22,8 @@ export default function About() {
                         </h3>
                     </div>
                 </Space>
+
+                <br></br>
             </Card>
 
         </Content>
