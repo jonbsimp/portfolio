@@ -62,7 +62,7 @@ export default function Timeline() {
       subtitle: 'Jitterbit | Remote', 
       description: 'Solution Architecture, Client Relationship Management, Pre-Sales Expertise, Cross-Functional Team Leadership, Project Management', 
       type: 'work', icon: <FaBriefcase />, 
-      logo: '/assets/jitterbit-logo.png', 
+      logo: '/assets/companies/jitterbit-logo.png', 
       icons: [] 
     },
     { 
@@ -70,7 +70,7 @@ export default function Timeline() {
       title: 'Application Architect', 
       subtitle: 'Jitterbit | Remote', 
       description: 'System Architecture Design, Integration Expertise, End-to-End Solution Development, Leadership and Mentoring, Technical Strategy and Planning', 
-      type: 'work', icon: <FaBriefcase />, logo: '/assets/jitterbit-logo.png', 
+      type: 'work', icon: <FaBriefcase />, logo: '/assets/companies/jitterbit-logo.png', 
       icons: [] 
     },
     { 
@@ -80,8 +80,8 @@ export default function Timeline() {
       description: 'Full-Stack Development, Low-Code Platform Development, JavaScript Frameworks, Database Design and Integration, Agile Methodologies', 
       type: 'work', 
       icon: <FaBriefcase />, 
-      logo: '/assets/zudy-logo.png', 
-      icons: ['/assets/sql.png', '/assets/react.png', '/assets/html.png', '/assets/css.svg', '/assets/snowflake.png',] 
+      logo: '/assets/companies/zudy-logo.png', 
+      icons: ['/assets/technologies/sql.png', '/assets/technologies/csharp.webp', '/assets/technologies/javascript.png', '/assets/technologies/react.png', '/assets/technologies/html.png', '/assets/technologies/css.svg', '/assets/technologies/snowflake.png',] 
     },
     { 
       date: '2019 - 2020', 
@@ -90,8 +90,8 @@ export default function Timeline() {
       description: 'Developed software for managing beer and kombucha brewery processes using the LAMP stack (PHP, MySQL, JavaScript, HTML, CSS) on the CodeIgniter framework.', 
       type: 'work', 
       icon: <FaBriefcase />, 
-      logo: '/assets/5th-ingredient-logo.png', 
-      icons: ['/assets/codeigniter.svg', '/assets/mysql.png','/assets/php.png', '/assets/jquery.png', '/assets/html.png', '/assets/css.svg', '/assets/git.png',] 
+      logo: '/assets/companies/5th-ingredient-logo.png', 
+      icons: ['/assets/technologies/codeigniter.svg', '/assets/technologies/mysql.png','/assets/technologies/php.png', '/assets/technologies/jquery.png', '/assets/technologies/html.png', '/assets/technologies/css.svg', '/assets/technologies/git.png',] 
     },
     { 
       date: '2019 - 2019', 
@@ -99,8 +99,8 @@ export default function Timeline() {
       subtitle: 'EMOTIV | San Diego, CA', 
       description: 'Developed a Spotify playlist application that dynamically added or removed songs in real time based on brainwave data from an EEG headset and user performance metrics.', 
       type: 'work', icon: <FaBriefcase />, 
-      logo: '/assets/emotiv_logo.jpeg', 
-      icons: ['/assets/spotify.png', '/assets/react.png', '/assets/python.png','/assets/docker.webp', '/assets/d3.png', '/assets/websocket.png',] 
+      logo: '/assets/companies/emotiv_logo.jpeg', 
+      icons: ['/assets/technologies/spotify.png', '/assets/technologies/react.png', '/assets/technologies/python.png','/assets/technologies/docker.webp', '/assets/technologies/d3.png', '/assets/technologies/websocket.png',] 
     },
     { 
       date: '2018 - 2018', 
@@ -109,8 +109,8 @@ export default function Timeline() {
       description: 'Teaching Assistant for the Jumpstart Program, where I taught students foundational front-end web development concepts using JavaScript, HTML, and CSS in 3-day intensive courses', 
       type: 'education', 
       icon: <FaGraduationCap />, 
-      logo: '/assets/learn-academy-logo.jpeg', 
-      icons: ['/assets/postgresql.png', '/assets/Rails.png', '/assets/ruby.png', '/assets/javascript.webp', '/assets/react.png', '/assets/html.png', '/assets/css.svg'], 
+      logo: '/assets/companies/learn-academy-logo.jpeg', 
+      icons: ['/assets/technologies/postgresql.png', '/assets/technologies/Rails.png', '/assets/technologies/ruby.png', '/assets/technologies/javascript.png', '/assets/technologies/react.png', '/assets/technologies/html.png', '/assets/technologies/css.svg'], 
     },
     { 
       date: '2014 - 2018', 
@@ -119,7 +119,7 @@ export default function Timeline() {
       description: 'Leadership and Management, Team Collaboration, Multitasking and Adaptability, Cultural Sensitivity and Communication', 
       type: 'work', 
       icon: <FaBriefcase />, 
-      logo: '/assets/seeka-logo.avif', 
+      logo: '/assets/companies/seeka-logo.avif', 
       icons: [] 
     },
     { 

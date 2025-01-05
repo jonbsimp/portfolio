@@ -6,6 +6,7 @@ import { Layout } from "antd";
 import VideoHeader from './components/VideoHeader';
 import About from './pages/About';
 import CustomFooter from './components/CustomFooter';
+import LinkedInRecommendation from './components/LinkedInRecommendation';
 // import Portfolio from './pages/Portfolio';
 
 const { Content } = Layout;
@@ -18,7 +19,7 @@ function App() {
             <Content>
                 <About />
                 <Timeline />
-                {/* <Portfolio /> */}
+                <LinkedInRecommendation />
             </Content>
             <CustomFooter />
         </Layout>
