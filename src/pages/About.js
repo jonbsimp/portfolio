@@ -1,14 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../App.css'; 
+import { Layout, Card, Row, Col, Modal } from "antd";
 
-import { Layout, Card, Row, Col } from "antd";
 const { Content } = Layout;
 
 export default function About() {
+    const [isModalVisible, setIsModalVisible] = useState(false);
+    const [modalImage, setModalImage] = useState('');
+
+    const showModal = (imageSrc) => {
+        setModalImage(imageSrc);
+        setIsModalVisible(true);
+    };
+
+    const handleCancel = () => {
+        setIsModalVisible(false);
+    };
+
     return (
         <Content className="about">
             <Card hoverable>
-                <Row gutter={[8, 8]} align="middle"> {/* Reduced gutter to bring elements closer */}
+                <Row gutter={[8, 8]} align="middle">
                     {/* Left Column for Image */}
                     <Col xs={24} sm={10} md={10} style={{ textAlign: 'center', paddingLeft: '10px'}}>
                         <img 
@@ -20,7 +32,9 @@ export default function About() {
                                 height: 'auto',
                                 borderRadius: '10px',
                                 boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',  // Optional: Adds shadow around the image
+                                cursor: 'pointer',
                             }}
+                            onClick={() => showModal('/assets/peru.jpg')} // Click handler to open modal
                         />
                     </Col>
 
@@ -41,9 +55,18 @@ export default function About() {
                         </div>
                     </Col>
                 </Row>
-                <br></br>
-                <br></br>
             </Card>
+
+            {/* Modal for enlarged image */}
+            <Modal
+                visible={isModalVisible}
+                onCancel={handleCancel}
+                footer={null}
+                centered
+                width="80%"
+            >
+                <img src={modalImage} alt="Enlarged" style={{ width: '100%' }} />
+            </Modal>
         </Content>
     );
 }
