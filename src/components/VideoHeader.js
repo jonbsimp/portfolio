@@ -21,6 +21,7 @@ export default function VideoHeader() {
           height: '100%',
           objectFit: 'cover', // Makes the video cover the entire header area
           zIndex: 0, // Ensures the video stays behind the content
+          pointerEvents: 'none', // Prevents video from being clickable
         }}
       />
       {/* Adding an overlay for the video to darken it */}
