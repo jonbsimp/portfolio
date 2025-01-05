@@ -57,13 +57,14 @@ export default function Timeline() {
 
     const experiences = [
         // { date: '2025 - present', title: 'MBA Canditate', subtitle: '', description: '', type: 'education', icon: <FaGraduationCap /> },
-        { date: '2024 - 2024', title: 'Solution Manager', subtitle: 'Jitterbit', description: 'Solution Architecture, Client Relationship Management, Pre-Sales Expertise, Cross-Functional Team Leadership, Project Management', type: 'work', icon: <FaBriefcase /> },
-        { date: '2023 - 2024', title: 'Application Architect', subtitle: 'Jitterbit', description: 'System Architecture Design, Integration Expertise, End-to-End Solution Development, Leadership and Mentoring, Technical Strategy and Planning', type: 'work', icon: <FaBriefcase /> },
-        { date: '2020 - 2022', title: 'Senior Application Developer', subtitle: 'Zudy', description: 'Full-Stack Development, Low-Code Platform Development, JavaScript Frameworks, Database Design and Integration, Agile Methodologies', type: 'work', icon: <FaBriefcase /> },
-        { date: '2019 - 2020', title: 'Software Developer', subtitle: 'The 5th Ingredient', description: 'Linux, Apache, MySQL, PHP, CodeIgniter, JQuery, HTML, and CSS', type: 'work', icon: <FaBriefcase /> },
-        { date: '2019 - 2019', title: 'Software Developer Intern', subtitle: 'EMOTIV | San Diego, CA', description: 'React, Django, Python, D3, WebSockets', type: 'work', icon: <FaBriefcase /> },
-        { date: '2018 - 2018', title: 'LEARN Academy', subtitle: 'San Diego, CA', description: 'Full-Stack Development Bootcamp', type: 'education', icon: <FaGraduationCap /> },
-        { date: '2014 - 2018', title: 'Working Holiday Visa', subtitle: 'Australia and New Zealand', description: 'Bartender in Sydney, Supervisor in Kiwi Fruit operations', type: 'work', icon: <FaBriefcase /> },
+        { date: '2024 - 2024', title: 'Solution Manager', subtitle: 'Jitterbit | Remote', description: 'Solution Architecture, Client Relationship Management, Pre-Sales Expertise, Cross-Functional Team Leadership, Project Management', type: 'work', icon: <FaBriefcase /> },
+        { date: '2023 - 2024', title: 'Application Architect', subtitle: 'Jitterbit | Remote', description: 'System Architecture Design, Integration Expertise, End-to-End Solution Development, Leadership and Mentoring, Technical Strategy and Planning', type: 'work', icon: <FaBriefcase /> },
+        { date: '2020 - 2022', title: 'Senior Application Developer', subtitle: 'Zudy | Remote', description: 'Full-Stack Development, Low-Code Platform Development, JavaScript Frameworks, Database Design and Integration, Agile Methodologies', type: 'work', icon: <FaBriefcase /> },
+        { date: '2019 - 2020', title: 'Software Developer', subtitle: 'The 5th Ingredient | San Diego, CA', description: 'Linux, Apache, MySQL, PHP, CodeIgniter, JQuery, HTML, and CSS', type: 'work', icon: <FaBriefcase /> },
+        { date: '2019 - 2019', title: 'Software Developer Intern', subtitle: 'EMOTIV | San Diego, CA', description: 'React, Python, Django, Docker, D3, WebSockets', type: 'work', icon: <FaBriefcase /> },
+        { date: '2018 - 2018', title: 'Full-Stack Development Bootcamp', subtitle: 'LEARN Academy | San Diego, CA', description: 'Ruby on Rails, Javascript, React, Git, PostgreSQL, React Native', type: 'education', icon: <FaGraduationCap /> },
+        { date: '2014 - 2018', title: 'Working Holiday Visa', subtitle: 'Seeka Limited | Australia & New Zealand', description: 'Leadership and Management, Team Collaboration, Multitasking and Adaptability, Cultural Sensitivity and Communication', type: 'work', icon: <FaBriefcase /> },
+        { date: '2012', title: 'Universidad Latina de Costa Rica', subtitle: 'Heredia, Costa Rica', description: 'Spanish, International Business', type: 'education', icon: <FaGraduationCap /> },
         { date: '2009 - 2014', title: 'Graduated from the University of Kentucky', subtitle: 'Lexington, KY', description: 'B.S. in Economics and International Business', type: 'education', icon: <FaGraduationCap /> },
     ];
 
