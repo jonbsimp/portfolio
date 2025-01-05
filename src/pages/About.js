@@ -27,6 +27,7 @@ export default function About() {
                     {/* Right Column for Text */}
                     <Col xs={24} sm={12} md={12} style={{ textAlign: 'left' }}>
                         <div>
+                            <h2>A little bit about me...</h2>
                             <h3>
                                 I am a seasoned software development leader and solution architect with extensive experience in delivering tailored
                                 solutions across healthcare, retail, sports, and manufacturing. I specialize in low-code development, database
