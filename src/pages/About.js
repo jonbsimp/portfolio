@@ -1,7 +1,7 @@
 import React from 'react';
 import '../App.css'; 
 
-import { Layout, Card, Row, Col, Space } from "antd";
+import { Layout, Card, Row, Col } from "antd";
 const { Content } = Layout;
 
 export default function About() {
