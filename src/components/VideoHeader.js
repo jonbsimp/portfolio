@@ -28,7 +28,7 @@ export default function VideoHeader() {
       <div className="video-overlay"></div>
 
       <div className="header-overlay">
-        <h1 className="header-text">Jon Simpson</h1>
+        <h1 className="header-text">JON SIMPSON</h1>
         <br></br>
         <hr></hr>
         <br></br>
