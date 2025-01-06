@@ -2,7 +2,7 @@ import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';  // Correct import
 import { Card, Layout } from 'antd';
 import { FaLinkedinIn } from 'react-icons/fa';  // LinkedIn icon
-import { EffectCoverflow, Pagination } from 'swiper/modules';
+import { EffectCoverflow, Pagination, Mousewheel } from 'swiper/modules';
 
 
 const { Content } = Layout;
@@ -64,11 +64,11 @@ const LinkedInRecommendations = () => {
 
   return (
 
-    <Content>
-    <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '20px' }}>
+    <Content style={{ paddingLeft: '100px ', paddingRight: '100px' }}>
+    {/* <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '20px' }}> */}
       <Swiper
         slidesPerView="auto"
-        spaceBetween={20}  // Space between the cards
+        spaceBetween={100}  // Space between the cards
         loop={true}
         autoplay={{
           delay: 3000,  // Set the autoplay delay to 3 seconds
@@ -79,7 +79,7 @@ const LinkedInRecommendations = () => {
         navigation={false}  // Remove navigation arrows
         style={{
           display: 'flex',
-          overflowX: 'auto',  // Enables horizontal scrolling
+          // overflowX: 'auto',  // Enables horizontal scrolling
           gap: '20px',
           paddingBottom: '10px',
           paddingLeft: '10px',
@@ -95,10 +95,11 @@ const LinkedInRecommendations = () => {
           modifier: 1,
           slideShadows: true,
         }}
-        modules={[ Pagination, EffectCoverflow ]}
+        mousewheel={true}
+        modules={[ Pagination, EffectCoverflow, Mousewheel ]}
       >
         {recommendations.map((rec, idx) => (
-          <SwiperSlide key={idx} style={{ width: '350px' }}>
+          <SwiperSlide key={idx} style={{ width: '400px' }}>
             <Card
               hoverable
               style={{
@@ -119,7 +120,7 @@ const LinkedInRecommendations = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-    </div>
+    {/* </div> */}
 
     </Content>
   );
