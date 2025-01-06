@@ -491,6 +491,8 @@ import classNames from 'classnames';
 import { VerticalTimelineElement } from 'react-vertical-timeline-component';
 import { FaBriefcase, FaGraduationCap } from 'react-icons/fa';
 import { Layout, Popover } from 'antd';
+import '../App.css';
+
 
 const { Content } = Layout;
 
@@ -687,7 +689,7 @@ export default function Timeline() {
                   />
                 )}
               </div>
-              <p>{exp.description}</p>
+              <p className="vertical-timeline-desc">{exp.description}</p>
 
               <br />
 

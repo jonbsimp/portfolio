@@ -2,6 +2,7 @@ import { useRef, React } from 'react';
 import { Card, Typography, Divider, Layout, Row, Col } from 'antd';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation, Mousewheel, Keyboard } from 'swiper/modules'; // Import Pagination module from swiper
+import '../App.css';
 
 const { Title, Paragraph } = Typography;
 const { Content } = Layout;

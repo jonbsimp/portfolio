@@ -3,6 +3,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';  // Correct import
 import { Card, Layout } from 'antd';
 import { FaLinkedinIn } from 'react-icons/fa';  // LinkedIn icon
 import { EffectCoverflow, Pagination, Mousewheel } from 'swiper/modules';
+import '../App.css';
+
 
 
 const { Content } = Layout;

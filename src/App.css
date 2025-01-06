@@ -6,11 +6,15 @@
     max-width: 800px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    font-family: 'Coda';
+
 }
 
 .about {
     text-align: center;
     padding: 20px;
+    font-family: 'Coda';
+
 }
 
 .about-text {
@@ -18,22 +22,29 @@
     line-height: 1.8;
     color: #333;
     margin: 15px 0;
-    font-family: 'Coda', sans-serif;
+    font-family: 'Coda';
 }
 
 body {
     background-color: #f4f4f9;
-    font-family: 'Coda';
+    font-family: 'Coda', sans-serif;
 }
 
 .vertical-timeline-element-title {
     font-size: 1.25rem;
     font-weight: bold;
+    font-family: 'Coda' !important;
 }
 
 .vertical-timeline-element-subtitle {
     font-size: 1rem;
     color: gray;
+    font-family: 'Coda' !important;
+}
+
+.vertical-timeline-desc {
+  font-family: 'Coda' !important;
+
 }
 
 .ant-btn-primary {
