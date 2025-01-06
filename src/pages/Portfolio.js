@@ -80,7 +80,7 @@ const caseStudies = [
   },
   {
     title: "Talent Tracking and Reporting Platform",
-    description: "Developed a system for a global healthcare organization to evaluate leadership candidates and automate workforce forecasting. Provided real-time insights and streamlined reporting processes.",
+    description: "Developed a system for a Fortune 500 global healthcare organization to evaluate leadership candidates and automate workforce forecasting. Provided real-time insights and streamlined reporting processes.",
     challenges: [
       "Implementing advanced data visualizations for actionable insights.",
       "Migrating legacy data to a modern platform.",
