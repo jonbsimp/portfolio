@@ -30,6 +30,17 @@ body {
     font-family: 'Coda', sans-serif;
 }
 
+.vertical-timeline-element-content {
+  margin-bottom: 20px; /* Default spacing for desktop */
+}
+
+@media (max-width: 768px) {
+  .timeline-element {
+    margin-bottom: 10px; /* Add smaller space between cards on mobile */
+    padding-bottom: 10px;
+  }
+}
+
 .vertical-timeline-element-title {
     font-size: 1.25rem;
     font-weight: bold;
@@ -177,13 +188,20 @@ body {
   transition: all 0.3s ease;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-  display: block;
+.swiper-button-next, .swiper-button-prev {
   position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   z-index: 10;
+  /* background-color: rgba(0, 0, 0, 0.5); */
   color: #001628;
-
+  border-radius: 50%;
+  padding: 10px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .swiper-button-next {
@@ -193,9 +211,34 @@ body {
 
 .swiper-button-prev {
   left: 10px; 
-  color: #001628 !important;
+  color:
+  
+  #001628 !important;
 }
 
+@media (max-width: 768px) {
+  .swiper-button-next, .swiper-button-prev {
+    width: 25px;
+    height: 25px;
+    padding: 8px;
+  }
+
+  .swiper-button-next:after, .swiper-button-prev:after {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .swiper-button-next, .swiper-button-prev {
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+  }
+
+  .swiper-button-next:after, .swiper-button-prev:after {
+    font-size: 14px;
+  }
+}
 .swiper-pagination-progressbar-fill {
   background-color: #001628 !important; 
 }
@@ -277,11 +320,10 @@ body {
   color: #E91E62 !important;
 }
 
-/* .site-layout-background {
-  background-color: #f5f5f5 !important;
+/* .ant-menu {
+  background-color: #f5f5f5;
 } */
-
-/* .custom-sidebar {
+/* .site-layout-background {
   background-color: #f5f5f5 !important;
 } */
 
@@ -293,6 +335,52 @@ body {
   background-color: #f5f5f5 !important;
 } */
 
-.ant-menu {
+.ant-menu.custom-sidebar {
   background-color: #f5f5f5;
+}
+
+
+
+/* Sidebar for large screens */
+.custom-sidebar {
+  position: sticky;
+  top: 0;
+  width: 80px; /* Fixed width for sidebar on large screens */
+  background-color: #f5f5f5;
+
+}
+
+/* Bottom navbar for smaller screens */
+.bottom-navbar {
+  display: none;
+  background-color: #f5f5f5;
+
+}
+
+/* Make the bottom navbar visible for smaller screens */
+@media (max-width: 1100px) {
+  .custom-sidebar {
+      display: none; /* Hide sidebar on smaller screens */
+  }
+
+  .bottom-navbar {
+      display: block; /* Show bottom navbar on smaller screens */
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #f5f5f5;
+      z-index: 100;
+  }
+
+  .ant-menu-item {
+      padding: 10px 20px;
+  }
+}
+
+/* Handle the calendar visibility on small screens */
+@media (max-width: 390px) {
+  #calendar {
+      display: block !important; /* Ensure the calendar stays visible */
+  }
 }

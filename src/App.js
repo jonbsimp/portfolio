@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import 'antd/dist/reset.css'; // Use this for Ant Design v5+
-
+// import 'antd/dist/antd.css'; 
 import './App.css';
 import { Layout, Menu } from 'antd';
 import { FaUser, FaBriefcase, FaRegCalendarAlt, FaHome } from 'react-icons/fa';
@@ -14,8 +13,6 @@ import LinkedInRecommendation from './components/LinkedInRecommendation';
 import Calendly from './components/Calendly';
 import Navbar from './components/Navbar';
 import CustomFooter from './components/CustomFooter';
-
-
 
 const { Content, Sider } = Layout;
 
@@ -52,18 +49,22 @@ function App() {
     return (
         <Layout style={{ minHeight: '100vh' }}>
             <Sider
-                width={80}
                 className="custom-sidebar"
+                breakpoint="lg"
+                collapsedWidth="0"
+                width={80}
                 style={{
                     position: 'sticky',
                     top: 0,
                     height: '100vh',
                     zIndex: 100,
                     backgroundColor: '#f5f5f5',
+                    
                 }}
             >
                 <Menu
                     mode="inline"
+                    className="sidebar-nav-menu"
                     selectedKeys={[selectedKey]}
                     style={{
                         height: '100%',
@@ -71,6 +72,7 @@ function App() {
                         display: 'flex',
                         flexDirection: 'column',
                         justifyContent: 'center',
+                        backgroundColor: '#f5f5f5'
                     }}
                 >
                     <Menu.Item key="1" icon={<FaHome size={24} />} style={{ marginBottom: '20px' }}>
@@ -94,7 +96,6 @@ function App() {
                 </Menu>
             </Sider>
 
-            {/* Main Content */}
             <Layout style={{ paddingLeft: 0 }}>
                 <Navbar />
                 <Content>
@@ -119,6 +120,27 @@ function App() {
                 </Content>
                 <CustomFooter />
             </Layout>
+
+            <div className="bottom-navbar">
+                <Menu
+                    mode="horizontal"
+                    selectedKeys={[selectedKey]}
+                    style={{
+                        display: 'flex',
+                        justifyContent: 'space-around',
+                        width: '100%',
+                        backgroundColor: '#f5f5f5'
+
+                    }}
+                >
+                    <Menu.Item key="1" icon={<FaHome size={18} />} ><a href="#home" aria-label="Go to Home Section"></a></Menu.Item>
+                    <Menu.Item key="2" icon={<FaUser size={18} />} ><a href="#about" aria-label="Go to About Section"></a></Menu.Item>
+                    <Menu.Item key="3" icon={<FaBriefcase size={18} />} ><a href="#portfolio" aria-label="Go to Portfolio Section"></a></Menu.Item>
+                    <Menu.Item key="4" icon={<TbTimeline size={18} />} ><a href="#timeline" aria-label="Go to Timeline Section"></a></Menu.Item>
+                    <Menu.Item key="5" icon={<GoCodeReview size={18} />} ><a href="#linkedin-recommendation" aria-label="Go to LinkedIn Review Section"></a></Menu.Item>
+                    <Menu.Item key="6" icon={<FaRegCalendarAlt size={18} />} ><a href="#calendar" aria-label="Go to Calendar Section"></a></Menu.Item>
+                </Menu>
+            </div>
         </Layout>
     );
 }

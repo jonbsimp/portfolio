@@ -110,7 +110,7 @@ export default function Timeline() {
       type: 'education',
       icon: <FaGraduationCap />,
       logo: '/assets/companies/learn-academy-logo.jpeg',
-      icons: ['/assets/technologies/postgresql.png', '/assets/technologies/Rails.png', '/assets/technologies/ruby.png', '/assets/technologies/javascript.png', '/assets/technologies/react.png', '/assets/technologies/html.png', '/assets/technologies/css.svg'],
+      icons: ['/assets/technologies/postgresql.png', '/assets/technologies/Rails.png', '/assets/technologies/javascript.png', '/assets/technologies/react.png', '/assets/technologies/html.png', '/assets/technologies/css.svg'],
     },
     {
       date: '2014 - 2018',
