@@ -144,7 +144,7 @@ const LinkedInRecommendations = () => {
                 title={rec.name}
                 description={<span style={{ color: '#0077b5' }}>{rec.role}</span>}
               />
-              <p>{rec.recommendation}</p>
+              <p style={{ fontFamily: 'Coda' }}>{rec.recommendation}</p>
             </Card>
           </SwiperSlide>
         ))}
