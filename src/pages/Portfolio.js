@@ -132,7 +132,7 @@ const Portfolio = () => {
         centeredSlides={true}
         loop={true}
         autoplay={{
-          delay: 10000,
+          delay: 15000,
           disableOnInteraction: false,
         }}
         grabCursor={true}
