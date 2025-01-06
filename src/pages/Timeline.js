@@ -135,7 +135,7 @@ export default function Timeline() {
       date: '2009 - 2014',
       title: 'Graduated from the University of Kentucky',
       subtitle: 'Lexington, KY',
-      description: 'B.S. in Economics and International Business',
+      description: 'Bachelor of Science in Economics',
       type: 'education',
       icon: <FaGraduationCap />,
       logo: '/assets/companies/uk-logo.png',

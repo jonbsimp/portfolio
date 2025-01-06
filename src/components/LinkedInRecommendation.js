@@ -46,7 +46,7 @@ const LinkedInRecommendations = () => {
     },
     {
       name: 'Isaac Meisner',
-      role: 'Solution Architect at Syniti',
+      role: 'Solutions Architect at Syniti',
       recommendation: 'I had the pleasure of working with Jon for a year on a project where we developed enhancements and provided support on a web application for major retail client. Together, we gathered requirements and tackled the implementation in our low-code platform. The tasks consisted of developing complex SQL rules in order to integrate with their external systems, and Jon consistently and successfully executed on the features and testing he was assigned. His dedication was clear in our frequent client meetings, where we would dive into testing, iterate on our logic, and play back the functionality in demos. Jon is a reliable team player with a commitment to delivering results.',
       avatar: '/assets/recommenders/isaac.jpeg',
       linkedin: 'https://www.linkedin.com/in/isaacjm/'
