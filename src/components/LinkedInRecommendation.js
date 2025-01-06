@@ -1,7 +1,11 @@
 import React from 'react';
-import { Card, Avatar } from 'antd';
+import { Swiper, SwiperSlide } from 'swiper/react';  // Correct import
+import { Card, Layout } from 'antd';
 import { FaLinkedinIn } from 'react-icons/fa';  // LinkedIn icon
+import { EffectCoverflow, Pagination } from 'swiper/modules';
 
+
+const { Content } = Layout;
 const { Meta } = Card;
 
 const LinkedInRecommendations = () => {
@@ -16,7 +20,7 @@ const LinkedInRecommendations = () => {
     },
     {
       name: 'Tracy Dunsdon',
-      role: 'Retired at CVS Health',
+      role: 'Retired',
       recommendation: 'Jon, while working at Zudy/Jitterbit, worked as part of my team, providing consulting services. He was a developer on a number of our Vinyl applications. Right out of the gate, Jon became part of the team. He helped us develop complex applications. He offered guidance and mentoring to other team members. Jon was a valuable addition to our organization, and I believe he would provide the same level of professionalism and positive effect for any organization.',
       avatar: '/assets/recommenders/tracy.jpeg',
       linkedin: 'https://www.linkedin.com/in/tracy-dunsdon-6835b0/'
@@ -36,7 +40,7 @@ const LinkedInRecommendations = () => {
       linkedin: 'https://www.linkedin.com/in/isaacjm/'
     },
     {
-      name: 'Austin Williams, CPA',
+      name: 'Austin Williams',
       role: 'Solution Architect at Jitterbit',
       recommendation: 'I first worked with Jon when he was brought on to my project in 2022. He was able to quickly learn our customer\'s business process and jump right into development of enhancements to the application. He has always been eager to learn and take on new challenges. I later became his mentor in 2023 and saw Jon grow as a consultant as he polished both his soft skills and technical savviness developing complex business applications. Jon led requirements meetings with managers and executives in a variety of industries including manufacturing, healthcare, retail, and pharmaceuticals and oversaw end to end development and deployment of their solutions. This breadth of experience uniquely positions him to succeed in any software engineering role.',
       avatar: '/assets/recommenders/austin.jpeg',
@@ -59,8 +63,20 @@ const LinkedInRecommendations = () => {
   ];
 
   return (
+
+    <Content>
     <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '20px' }}>
-      <div
+      <Swiper
+        slidesPerView="auto"
+        spaceBetween={20}  // Space between the cards
+        loop={true}
+        autoplay={{
+          delay: 3000,  // Set the autoplay delay to 3 seconds
+          disableOnInteraction: false,  // Keep autoplay even if user interacts
+        }}
+        speed={1500}  // Slow movement speed of the slides
+        pagination={true}  // Remove pagination (bottom bar)
+        navigation={false}  // Remove navigation arrows
         style={{
           display: 'flex',
           overflowX: 'auto',  // Enables horizontal scrolling
@@ -68,52 +84,44 @@ const LinkedInRecommendations = () => {
           paddingBottom: '10px',
           paddingLeft: '10px',
           paddingRight: '10px',
-          flexWrap: 'nowrap',  // Prevents wrapping of cards to the next line
         }}
+        effect={'coverflow'}
+        grabCursor={true}
+        centeredSlides={true}
+        coverflowEffect={{
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        }}
+        modules={[ Pagination, EffectCoverflow ]}
       >
         {recommendations.map((rec, idx) => (
-          <Card
-            key={idx}
-            hoverable
-            style={{
-              width: '350px',  // Increased card width
-              textAlign: 'center',
-              boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-              flexShrink: 0,  // Prevents the card from shrinking
-              marginBottom: '20px',  // Adds margin between rows
-              borderRadius: '10px',  // Rounded corners for a more modern feel
-              position: 'relative',  // To position the LinkedIn icon in the top right
-            }}
-          >
-            {/* LinkedIn icon positioned at the top right corner */}
-            <a
-              href={rec.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
+          <SwiperSlide key={idx} style={{ width: '350px' }}>
+            <Card
+              hoverable
               style={{
-                position: 'absolute',
-                top: '10px',
-                right: '10px',
-                color: '#0077b5',
-                fontSize: '24px',
+                textAlign: 'center',
+                boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+                borderRadius: '10px',
+                position: 'relative',  // To position the LinkedIn icon in the top right
               }}
             >
-              <FaLinkedinIn />
-            </a>
-            <Avatar
-              src={rec.avatar || '/default-avatar.png'}
-              size={64}
-              style={{ marginBottom: '10px', borderRadius: '50%' }}
-            />
-            <Meta
-              title={rec.name}
-              description={<span style={{ color: '#0077b5' }}>{rec.role}</span>}
-            />
-            <p>{rec.recommendation}</p>
-          </Card>
+              <FaLinkedinIn style={{ color: '#0072b1' }} />
+
+              <Meta
+                title={rec.name}
+                description={<span style={{ color: '#0077b5' }}>{rec.role}</span>}
+              />
+              <p>{rec.recommendation}</p>
+            </Card>
+          </SwiperSlide>
         ))}
-      </div>
+      </Swiper>
     </div>
+
+    </Content>
   );
 };
 

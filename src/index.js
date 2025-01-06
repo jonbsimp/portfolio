@@ -3,6 +3,13 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import 'swiper/css'; // Core styles
+import 'swiper/css/navigation'; // Navigation styles
+import 'swiper/css/pagination'; // Pagination styles (if using pagination)
+import 'react-vertical-timeline-component/style.min.css';
+// import 'swiper/swiper-bundle.min.css';  // Import Swiper styles
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

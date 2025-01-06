@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import '../App.css'; 
-import { Layout, Card, Row, Col, Modal } from "antd";
+import { Layout, Row, Col, Modal, Card, Space } from "antd";
+// import Portfolio from './Portfolio';
+// import { FaArrowRight } from 'react-icons/fa'; // Import the right arrow icon from react-icons
 
 const { Content } = Layout;
+// const { Title, Paragraph } = Typography;
 
 export default function About() {
     const [isModalVisible, setIsModalVisible] = useState(false);
@@ -19,7 +22,9 @@ export default function About() {
 
     return (
         <Content className="about">
-            <Card hoverable>
+            <Card>
+
+                <Space>
                 <Row gutter={0} align="middle" style={{ margin: '0' }}>
                     {/* Left Column for Image */}
                     <Col xs={24} sm={10} md={10} style={{ textAlign: 'center', padding: '0' }}>
@@ -40,7 +45,7 @@ export default function About() {
 
                     {/* Right Column for Text */}
                     <Col xs={24} sm={14} md={14} style={{ textAlign: 'left', padding: '0' }}>
-                        <div>
+                        <div className='about-me'>
                             <h2><i>A little bit about me...</i></h2>
                             <h3>
                                 I am a seasoned software development leader and solution architect with extensive experience in delivering tailored
@@ -56,7 +61,14 @@ export default function About() {
                     </Col>
                 </Row>
 
+                </Space>
+
+                {/* need to update this with padding on Row */}
+                {/* <br></br>
                 <br></br>
+                <br></br> */}
+
+               {/* <Portfolio /> */}
 
             </Card>
 
