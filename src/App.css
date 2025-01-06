@@ -260,3 +260,19 @@ body {
   font-size: 14px;
   /* text-align: center; */
 }
+
+.ant-menu-item {
+  color: #001628 !important; 
+
+}
+
+/* Change the background and text color of the active menu item */
+.ant-menu-item-selected {
+  background-color: transparent !important;
+  color: #007BFF !important; 
+}
+
+/* Optionally, style the hover state to match */
+.ant-menu-item:hover {
+  color: #E91E62 !important;
+}

@@ -76,7 +76,7 @@ const LinkedInRecommendations = () => {
 
   return (
 
-    <Content style={{ paddingLeft: '100px', paddingRight: '100px', paddingBottom: '20px' }}>
+    <Content style={{ paddingLeft: '100px', paddingRight: '100px', paddingBottom: '20px', paddingTop: '20px' }}>
       <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '20px' }}>
         <Title
           className="linkedin-title"
@@ -128,7 +128,17 @@ const LinkedInRecommendations = () => {
                 position: 'relative',  // To position the LinkedIn icon in the top right
               }}
             >
-              <FaLinkedinIn style={{ color: '#0072b1' }} />
+              <a
+                href='https://www.linkedin.com/in/jonbsimp/details/recommendations/?detailScreenTabIndex=0'
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'inline-block',
+                  marginBottom: '20px', // Add space below the icon
+                }}
+              >
+                <FaLinkedinIn style={{ color: '#0072b1', fontSize: '24px' }} />
+              </a>
 
               <Meta
                 title={rec.name}

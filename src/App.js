@@ -1,28 +1,62 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
-import Navbar from './components/Navbar';
-import Timeline from './pages/Timeline';
-import Portfolio from './pages/Portfolio';  // Ensure you import the Portfolio component
 import { Layout, Menu } from 'antd';
-import { FaUser, FaBriefcase, FaRegCalendarAlt, FaHome } from 'react-icons/fa';  // Importing React Icons
+import { FaUser, FaBriefcase, FaRegCalendarAlt, FaHome } from 'react-icons/fa';
 import { TbTimeline } from "react-icons/tb";
+import { GoCodeReview } from "react-icons/go";
 import VideoHeader from './components/VideoHeader';
 import About from './pages/About';
-import CustomFooter from './components/CustomFooter';
+import Portfolio from './pages/Portfolio';
+import Timeline from './pages/Timeline';
 import LinkedInRecommendation from './components/LinkedInRecommendation';
 import Calendly from './components/Calendly';
-import { GoCodeReview } from "react-icons/go";
+import Navbar from './components/Navbar';
+import CustomFooter from './components/CustomFooter';
+
 
 const { Content, Sider } = Layout;
 
 function App() {
+    const [selectedKey, setSelectedKey] = useState('1');
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const sections = [
+                { id: 'home', key: '1' },
+                { id: 'about', key: '2' },
+                { id: 'portfolio', key: '3' },
+                { id: 'timeline', key: '4' },
+                { id: 'linkedin-recommendation', key: '5' },
+                { id: 'calendar', key: '6' },
+            ];
+
+            const scrollPosition = window.scrollY + window.innerHeight / 3; // Adjust for better detection
+            for (let i = sections.length - 1; i >= 0; i--) {
+                const section = document.getElementById(sections[i].id);
+                if (section && section.offsetTop <= scrollPosition) {
+                    setSelectedKey(sections[i].key);
+                    break;
+                }
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
         <Layout style={{ minHeight: '100vh' }}>
             {/* Sidebar */}
-            <Sider width={80} className="site-layout-background" style={{ position: 'sticky', top: 0, height: '100vh', zIndex: 100 }}>
+            <Sider
+                width={80}
+                className="site-layout-background"
+                style={{ position: 'sticky', top: 0, height: '100vh', zIndex: 100 }}
+            >
                 <Menu
                     mode="inline"
-                    defaultSelectedKeys={['1']}
+                    selectedKeys={[selectedKey]}
                     style={{
                         height: '100%',
                         borderRight: 0,
@@ -55,21 +89,19 @@ function App() {
             {/* Main Content */}
             <Layout style={{ paddingLeft: 0 }}>
                 <Navbar />
-                <div id="home">
-                    <VideoHeader />
-                </div>
-                <Content style={{ padding: '20px' }}>
+                <Content>
+                    <div id="home">
+                        <VideoHeader />
+                    </div>
                     <div id="about">
                         <About />
                     </div>
                     <div id="portfolio">
-                        <Portfolio /> {/* Add the Portfolio component here */}
+                        <Portfolio />
                     </div>
                     <div id="timeline">
                         <Timeline />
                     </div>
-                    <br></br>
-                    <br></br>
                     <div id="linkedin-recommendation">
                         <LinkedInRecommendation />
                     </div>

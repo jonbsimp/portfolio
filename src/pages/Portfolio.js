@@ -125,83 +125,86 @@ const Portfolio = () => {
   return (
     <Content style={{ padding: '30px', backgroundColor: '#f5f5f5', paddingLeft: '150px', paddingRight: '150px' }}>
       <Row gutter={0} align="middle" style={{ margin: '0' }}>
-                    {/* Left Column for Image */}
-                    <Col xs={24} sm={24} md={24} style={{ textAlign: 'center', padding: '0' }}>
-      <Title className="project-title" style={{ fontSize: '22px'}}>Projects</Title>
-      <Swiper
-        spaceBetween={30}
-        slidesPerView="auto"
-        centeredSlides={true}
-        loop={true}
-        autoplay={{
-          delay: 15000,
-          disableOnInteraction: false,
-        }}
-        grabCursor={true}
-        touchMoveStopPropagation={false}
-        mouseDrag={true}
-        pagination={{
-          type: 'progressbar',
-        }}
-        modules={[Navigation, Pagination, Mousewheel, Keyboard, Autoplay]}
-        onAutoplayTimeLeft={onAutoplayTimeLeft}
-        navigation={{
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        }}
-        style={{
-          padding: '20px',
-          maxWidth: '100%',
-          margin: '0 auto',
-          position: 'relative',
-        }}
-      >                
+        {/* Left Column for Image */}
+        <Col xs={24} sm={24} md={24} style={{ textAlign: 'center', padding: '0' }}>
+          <Title className="project-title" style={{ fontSize: '22px' }}>Projects</Title>
+          <Swiper
+            spaceBetween={30}
+            slidesPerView="auto"
+            centeredSlides={true}
+            loop={true}
+            autoplay={{
+              delay: 15000,
+              disableOnInteraction: false,
+            }}
+            grabCursor={true}
+            touchMoveStopPropagation={false}
+            mouseDrag={true}
+            pagination={{
+              type: 'progressbar',
+            }}
+            modules={[Navigation, Pagination, Mousewheel, Keyboard, Autoplay]}
+            onAutoplayTimeLeft={onAutoplayTimeLeft}
+            navigation={{
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            }}
+            style={{
+              padding: '20px',
+              maxWidth: '100%',
+              margin: '0 auto',
+              position: 'relative',
+            }}
+          >
 
-        <div className="swiper-button-next"></div>
-        <div className="swiper-button-prev"></div>
-        {caseStudies.map((caseStudy, index) => (
-          <SwiperSlide key={index} style={{ display: 'flex', justifyContent: 'center' }}>
-            <Card
-              title={<span style={{ color: '#001628', fontFamily: '"Coda", cursive, sans-serif' }}>{caseStudy.title}</span>}
-              bordered={false}
-              style={{
-                background: '#ffffff',
-                borderRadius: '12px',
-                padding: '30px',
-                textAlign: 'left',
-                maxWidth: '750px',
-                margin: '0 auto',
-                transition: 'transform 0.4s ease, box-shadow 0.4s ease',
-                boxShadow: '0 6px 12px rgba(0, 0, 0, 0.1)',
-                transform: 'scale(1)',
-                animation: 'fadeIn 1s ease',
-              }}
-            >
-              <Paragraph style={{ fontSize: '16px', fontFamily: '"Roboto", sans-serif' }}>
-                {caseStudy.description}
-              </Paragraph>
-              <Divider />
-              <Title level={5} style={{ fontFamily: '"Coda", cursive, sans-serif' }}>Key Achievements:</Title>
-              <ul style={{ textAlign: 'left', fontFamily: '"Roboto", sans-serif' }}>
-                {caseStudy.keyAchievements.map((achievement, idx) => (
-                  <li key={idx} style={{ fontSize: '14px' }}>{achievement}</li>
-                ))}
-              </ul>
-              <Title level={5} style={{ fontFamily: '"Coda", cursive, sans-serif' }}>Technologies Used:</Title>
-              <Paragraph style={{ fontSize: '14px', fontFamily: '"Coda", sans-serif' }}>
-                {caseStudy.technologies.join(", ")}
-              </Paragraph>
-            </Card>
-          </SwiperSlide>
-        ))}
-        <div className="autoplay-progress" slot="container-end">
-          <svg viewBox="0 0 48 48" ref={progressCircle}>
-            <circle className="progress-circle" cx="24" cy="24" r="20"></circle>
-          </svg>
-          <span ref={progressContent}></span>
-        </div>
-      </Swiper>
-      </Col></Row>
+            <div className="swiper-button-next"></div>
+            <div className="swiper-button-prev"></div>
+            {caseStudies.map((caseStudy, index) => (
+              <SwiperSlide key={index} style={{ display: 'flex', justifyContent: 'center' }}>
+                <Card
+                  title={<span style={{ color: '#001628', fontFamily: '"Coda", cursive, sans-serif' }}>{caseStudy.title}</span>}
+                  bordered={false}
+                  style={{
+                    background: '#ffffff',
+                    borderRadius: '12px',
+                    padding: '30px',
+                    textAlign: 'left',
+                    maxWidth: '750px',
+                    margin: '0 auto',
+                    transition: 'transform 0.4s ease, box-shadow 0.4s ease',
+                    boxShadow: '0 6px 12px rgba(0, 0, 0, 0.1)',
+                    transform: 'scale(1)',
+                    animation: 'fadeIn 1s ease',
+                  }}
+                >
+                  <Paragraph style={{ fontSize: '16px', fontFamily: '"Roboto", sans-serif' }}>
+                    {caseStudy.description}
+                  </Paragraph>
+                  <Divider />
+                  <Title level={5} style={{ fontFamily: '"Coda", cursive, sans-serif' }}>Key Achievements:</Title>
+                  <ul style={{ textAlign: 'left', fontFamily: '"Roboto", sans-serif' }}>
+                    {caseStudy.keyAchievements.map((achievement, idx) => (
+                      <li key={idx} style={{ fontSize: '14px' }}>{achievement}</li>
+                    ))}
+                  </ul>
+                  <Title level={5} style={{ fontFamily: '"Coda", cursive, sans-serif' }}>Technologies Used:</Title>
+                  <Paragraph style={{ fontSize: '14px', fontFamily: '"Coda", sans-serif' }}>
+                    {caseStudy.technologies.join(", ")}
+                  </Paragraph>
+
+                </Card>
+
+              </SwiperSlide>
+            ))}
+
+            <div className="autoplay-progress" slot="container-end">
+              <svg viewBox="0 0 48 48" ref={progressCircle}>
+                <circle className="progress-circle" cx="24" cy="24" r="20"></circle>
+              </svg>
+              <span ref={progressContent}></span>
+            </div>
+          </Swiper>
+        </Col></Row>
     </Content>
   );
 };
