@@ -127,6 +127,7 @@ const Portfolio = () => {
       <Row gutter={0} align="middle" style={{ margin: '0' }}>
                     {/* Left Column for Image */}
                     <Col xs={24} sm={24} md={24} style={{ textAlign: 'center', padding: '0' }}>
+      <Title className="project-title" style={{ fontSize: '22px'}}>Projects</Title>
       <Swiper
         spaceBetween={30}
         slidesPerView="auto"

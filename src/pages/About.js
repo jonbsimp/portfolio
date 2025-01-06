@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import '../App.css'; 
-import { Layout, Row, Col, Modal, Card, Space } from "antd";
+import '../App.css';
+import { Layout, Row, Col, Modal, Card, Space, Typography } from "antd";
 // import Portfolio from './Portfolio';
-// import { FaArrowRight } from 'react-icons/fa'; // Import the right arrow icon from react-icons
+// import { FaArrowRight } from 'react-icons/fa';
 
 const { Content } = Layout;
-// const { Title, Paragraph } = Typography;
+const { Title } = Typography;
 
 export default function About() {
     const [isModalVisible, setIsModalVisible] = useState(false);
@@ -25,41 +25,41 @@ export default function About() {
             <Card>
 
                 <Space>
-                <Row gutter={0} align="middle" style={{ margin: '0' }}>
-                    {/* Left Column for Image */}
-                    <Col xs={24} sm={10} md={10} style={{ textAlign: 'center', padding: '0' }}>
-                        <img 
-                            src="/assets/peru.jpg"  // Replace with your image path
-                            alt="About Me"
-                            style={{
-                                width: '100%',
-                                maxWidth: '250px',
-                                height: 'auto',
-                                borderRadius: '10px',
-                                boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-                                cursor: 'pointer',
-                            }}
-                            onClick={() => showModal('/assets/peru.jpg')} // Click handler to open modal
-                        />
-                    </Col>
+                    <Row gutter={0} align="middle" style={{ margin: '0' }}>
+                        {/* Left Column for Image */}
+                        <Col xs={24} sm={10} md={10} style={{ textAlign: 'center', padding: '0' }}>
+                            <img
+                                src="/assets/peru.jpg"  // Replace with your image path
+                                alt="About Me"
+                                style={{
+                                    width: '100%',
+                                    maxWidth: '250px',
+                                    height: 'auto',
+                                    borderRadius: '10px',
+                                    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+                                    cursor: 'pointer',
+                                }}
+                                onClick={() => showModal('/assets/peru.jpg')} // Click handler to open modal
+                            />
+                        </Col>
 
-                    {/* Right Column for Text */}
-                    <Col xs={24} sm={14} md={14} style={{ textAlign: 'left', padding: '0' }}>
-                        <div className='about-me'>
-                            <h2><i>A little bit about me...</i></h2>
-                            <h3>
-                                I am a seasoned software development leader and solution architect with extensive experience in delivering tailored
-                                solutions across healthcare, retail, sports, and manufacturing. I specialize in low-code development, database
-                                management, and full-stack architecture, working with global teams to achieve business goals.
-                            </h3>
-                            <h3>
-                                Beyond my career, I’ve spent years traveling the globe, connecting with different cultures, and pursuing my
-                                passions for surfing, snowboarding, and yoga. This adventurous spirit fuels my creativity, adaptability, and ability
-                                to think outside the box — qualities that I bring to every professional project.
-                            </h3>
-                        </div>
-                    </Col>
-                </Row>
+                        {/* Right Column for Text */}
+                        <Col xs={24} sm={14} md={14} style={{ textAlign: 'left', padding: '0' }}>
+                            <div className='about-me'>
+                                <Title style={{ fontStyle: 'italic', fontSize: '22px', paddingBottom: '20px' }} >A little bit about me...</Title>
+                                <h3>
+                                    I am a seasoned software development leader and solution architect with extensive experience in delivering tailored
+                                    solutions across healthcare, retail, sports, and manufacturing. I specialize in low-code development, database
+                                    management, and full-stack architecture, working with global teams to achieve business goals.
+                                </h3>
+                                <h3>
+                                    Beyond my career, I’ve spent years traveling the globe, connecting with different cultures, and pursuing my
+                                    passions for surfing, snowboarding, and yoga. This adventurous spirit fuels my creativity, adaptability, and ability
+                                    to think outside the box — qualities that I bring to every professional project.
+                                </h3>
+                            </div>
+                        </Col>
+                    </Row>
 
                 </Space>
 
@@ -68,11 +68,10 @@ export default function About() {
                 <br></br>
                 <br></br> */}
 
-               {/* <Portfolio /> */}
+                {/* <Portfolio /> */}
 
             </Card>
 
-            {/* Modal for enlarged image */}
             <Modal
                 visible={isModalVisible}
                 onCancel={handleCancel}

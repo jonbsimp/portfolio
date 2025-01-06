@@ -11,6 +11,7 @@ import About from './pages/About';
 import CustomFooter from './components/CustomFooter';
 import LinkedInRecommendation from './components/LinkedInRecommendation';
 import Calendly from './components/Calendly';
+import { GoCodeReview } from "react-icons/go";
 
 const { Content, Sider } = Layout;
 
@@ -42,7 +43,10 @@ function App() {
                     <Menu.Item key="4" icon={<TbTimeline size={24} />} style={{ marginBottom: '20px' }}>
                         <a href="#timeline" aria-label="Go to Timeline Section"></a>
                     </Menu.Item>
-                    <Menu.Item key="5" icon={<FaRegCalendarAlt size={24} />} style={{ marginBottom: '20px' }}>
+                    <Menu.Item key="5" icon={<GoCodeReview size={24} />} style={{ marginBottom: '20px' }}>
+                        <a href="#linkedin-recommendation" aria-label="Go to LinkedIn Review Section"></a>
+                    </Menu.Item>
+                    <Menu.Item key="6" icon={<FaRegCalendarAlt size={24} />} style={{ marginBottom: '20px' }}>
                         <a href="#calendar" aria-label="Go to Calendar Section"></a>
                     </Menu.Item>
                 </Menu>

@@ -63,46 +63,41 @@ body {
 .vertical-timeline-element--work:hover,
 .vertical-timeline-element--education:hover {
   transform: scale(1.05);
-  z-index: 10; /* Ensures the magnified element is above others */
+  z-index: 10; 
 }
 
 .vertical-timeline-element-title,
 .vertical-timeline-element-subtitle {
-  transition: transform 0.3s ease; /* Optional smooth transition for title and subtitle */
+  transition: transform 0.3s ease; 
 }
 
 .about {
     background-color: #F5F5F5;
 }
 
-/* CSS for Video Header Component */
-
-/* Add an overlay to darken the video */
 .video-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* Darken the video with transparency */
-    z-index: 1; /* Ensure the overlay is above the video but below the text */
+    background: rgba(0, 0, 0, 0.4); 
+    z-index: 1; 
   }
   
-  /* Centering the text overlay */
   .header-overlay {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    z-index: 2; /* Ensure the text stays on top of the video */
+    z-index: 2;
   }
   
-  /* Styling for each header text */
   .header-text {
-    color: rgba(216, 216, 216, 0.9);  /* Dusty white color with some opacity */
-    font-family: 'Coda', sans-serif;  /* Fun and playful font */
-    font-weight: 600;  /* Semi-bold weight */
+    color: rgba(216, 216, 216, 0.9);  
+    font-family: 'Coda', sans-serif;  
+    font-weight: 600;  
     margin: 0.5em 0;
     line-height: 1.3;
   }
@@ -112,7 +107,6 @@ body {
     line-height: 2;
   }
   
-  /* Optional: Adjust styling for the background video */
   video {
     position: absolute;
     top: 0;
@@ -120,16 +114,12 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -1;  /* Keep the video behind the text */
+    z-index: -1; 
   }
   
-  /* Add the Poppins font from Google Fonts */
-  
-
-  /* General Footer Styles */
-.footer {
-    background-color: #001628; /* Dark blue background */
-    color: #dcdcdc; /* Dusty white text */
+  .footer {
+    background-color: #001628; 
+    color: #dcdcdc; 
     text-align: center;
     padding: 20px;
     font-size: 16px;
@@ -137,24 +127,21 @@ body {
     bottom: 0;
     width: 100%;
     z-index: 10;
-    margin-top: 50px; /* Adds space above the footer */
+    margin-top: 50px;
   }
   
-  /* Footer content styles */
   .footer-content {
     max-width: 1200px;
     margin: 0 auto;
     padding: 10px;
   }
   
-  /* Footer Text */
   .footer-text {
     margin: 5px 0;
     font-family: 'Coda', sans-serif;
     font-weight: 400;
   }
-  
-  /* Social Links */
+
   .footer-socials {
     margin-top: 10px;
   }
@@ -167,10 +154,9 @@ body {
   }
   
   .footer-link:hover {
-    color: #ffcc00; /* Gold color on hover */
+    color: #ffcc00; 
   }
   
-  /* Responsive styling */
   @media (max-width: 768px) {
     .footer {
       padding: 15px;
@@ -185,7 +171,6 @@ body {
     }
   }
   
-/* Add this CSS in your stylesheet */
 .card-hover:hover {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
   transform: translateY(-5px);
@@ -202,17 +187,17 @@ body {
 }
 
 .swiper-button-next {
-  right: 10px; /* Adjust position */
+  right: 10px; 
   color: #001628 !important;
 }
 
 .swiper-button-prev {
-  left: 10px; /* Adjust position */
+  left: 10px; 
   color: #001628 !important;
 }
 
 .swiper-pagination-progressbar-fill {
-  background-color: #001628 !important; /* Apply custom color to the progress bar */
+  background-color: #001628 !important; 
 }
 
 
@@ -251,3 +236,24 @@ body {
   color: #001628 !important;
 }
 
+.project-title {
+  font-family: 'Coda', sans-serif;
+  font-size: 14px;
+}
+
+.timeline-title {
+  font-family: 'Coda', sans-serif;
+  font-size: 14px;
+}
+
+.linkedin-title {
+  font-family: 'Coda', sans-serif;
+  font-size: 14px;
+  /* text-align: center; */
+}
+
+.calendly-title {
+  font-family: 'Coda', sans-serif;
+  font-size: 14px;
+  /* text-align: center; */
+}

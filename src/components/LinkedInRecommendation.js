@@ -1,17 +1,27 @@
 import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';  // Correct import
-import { Card, Layout } from 'antd';
-import { FaLinkedinIn } from 'react-icons/fa';  // LinkedIn icon
-import { EffectCoverflow, Pagination, Mousewheel } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import {
+  Card,
+  Layout,
+  Typography,
+  // Space
+} from 'antd';
+import { FaLinkedinIn } from 'react-icons/fa';
+import {
+  EffectCoverflow,
+  Pagination,
+  Mousewheel
+} from 'swiper/modules';
 import '../App.css';
 
 
 
 const { Content } = Layout;
+const { Title } = Typography;
 const { Meta } = Card;
 
 const LinkedInRecommendations = () => {
-  // Local data for LinkedIn recommendations
+
   const recommendations = [
     {
       name: 'Theresa Mann',
@@ -28,11 +38,11 @@ const LinkedInRecommendations = () => {
       linkedin: 'https://www.linkedin.com/in/tracy-dunsdon-6835b0/'
     },
     {
-        name: 'Geoff Howski',
-        role: 'Sr. Solution Architect & Delivery Lead at Jitterbit',
-        recommendation: 'I’ve had the pleasure of working with Jon on a handful of different projects at both Jitterbit and Zudy (Jitterbit acquired Zudy). I was impressed with Jon’s hard-working, positive attitude from day one. He has always maintained a goal-oriented mindset; one which was always in service of meeting deadlines on (or under) budget. I also found communication with Jon to be fluid. He’s very personable. I have no doubt that Jon will continue his ability to make a tangible impact and add real value to the business for which he works next. ',
-        avatar: '/assets/recommenders/geoff.jpeg',
-        linkedin: 'https://www.linkedin.com/in/geoffreyhowski/'
+      name: 'Geoff Howski',
+      role: 'Sr. Solution Architect & Delivery Lead at Jitterbit',
+      recommendation: 'I’ve had the pleasure of working with Jon on a handful of different projects at both Jitterbit and Zudy (Jitterbit acquired Zudy). I was impressed with Jon’s hard-working, positive attitude from day one. He has always maintained a goal-oriented mindset; one which was always in service of meeting deadlines on (or under) budget. I also found communication with Jon to be fluid. He’s very personable. I have no doubt that Jon will continue his ability to make a tangible impact and add real value to the business for which he works next. ',
+      avatar: '/assets/recommenders/geoff.jpeg',
+      linkedin: 'https://www.linkedin.com/in/geoffreyhowski/'
     },
     {
       name: 'Isaac Meisner',
@@ -56,18 +66,26 @@ const LinkedInRecommendations = () => {
       linkedin: 'https://www.linkedin.com/in/mattbo/'
     },
     {
-        name: 'Matt Clark',
-        role: 'Director of Engineering at Branding Brand',
-        recommendation: 'I\'ve gotten to know Jon as he\'s gone through the Learn Academy program, and his journey is especially inspiring. He\'s a smart, quick thinker, and solid junior developer, but what stands out about Jon is his grit. I saw his determination first hand as life outside of Learn threw him some real curveballs and he persevered, turning setback into advantage. Jon\'s grit and technical skill are a powerful combination.',
-        avatar: '/assets/recommenders/mattc.jpeg',
-        linkedin: 'https://www.linkedin.com/in/leadprogrammer/'
-      },
+      name: 'Matt Clark',
+      role: 'Director of Engineering at Branding Brand',
+      recommendation: 'I\'ve gotten to know Jon as he\'s gone through the Learn Academy program, and his journey is especially inspiring. He\'s a smart, quick thinker, and solid junior developer, but what stands out about Jon is his grit. I saw his determination first hand as life outside of Learn threw him some real curveballs and he persevered, turning setback into advantage. Jon\'s grit and technical skill are a powerful combination.',
+      avatar: '/assets/recommenders/mattc.jpeg',
+      linkedin: 'https://www.linkedin.com/in/leadprogrammer/'
+    },
   ];
 
   return (
 
-    <Content style={{ paddingLeft: '100px ', paddingRight: '100px' }}>
-    {/* <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '20px' }}> */}
+    <Content style={{ paddingLeft: '100px', paddingRight: '100px', paddingBottom: '20px' }}>
+      <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '20px' }}>
+        <Title
+          className="linkedin-title"
+          style={{ fontSize: '22px' }}
+        >
+          What People Are Saying
+        </Title>
+      </div>
+
       <Swiper
         slidesPerView="auto"
         spaceBetween={100}  // Space between the cards
@@ -81,7 +99,6 @@ const LinkedInRecommendations = () => {
         navigation={false}  // Remove navigation arrows
         style={{
           display: 'flex',
-          // overflowX: 'auto',  // Enables horizontal scrolling
           gap: '20px',
           paddingBottom: '10px',
           paddingLeft: '10px',
@@ -98,7 +115,7 @@ const LinkedInRecommendations = () => {
           slideShadows: true,
         }}
         mousewheel={true}
-        modules={[ Pagination, EffectCoverflow, Mousewheel ]}
+        modules={[Pagination, EffectCoverflow, Mousewheel]}
       >
         {recommendations.map((rec, idx) => (
           <SwiperSlide key={idx} style={{ width: '400px' }}>
@@ -122,9 +139,9 @@ const LinkedInRecommendations = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-    {/* </div> */}
-
     </Content>
+
+
   );
 };
 
