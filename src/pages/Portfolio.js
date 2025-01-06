@@ -10,108 +10,107 @@ const { Content } = Layout;
 const caseStudies = [
   {
     title: "Global Inventory Management Platform",
-    description: "A global manufacturing company needed a scalable solution to manage their vast inventory across multiple international locations. The goal was to provide a seamless inventory search, requisition, and approval workflow for users in the USA, France, and Germany. The platform required integration with Snowflake and third-party APIs to ensure real-time data accuracy and advanced approval logic to streamline procurement processes.",
+    description: "Developed a scalable solution for a global manufacturing company to streamline inventory management across international locations. Integrated Snowflake and third-party APIs to enhance real-time data accuracy and implement advanced approval workflows.",
     challenges: [
-      "Handling large-scale data synchronization across global databases.",
-      "Designing a complex, multi-level approval workflow adaptable to regional policies.",
-      "Integrating external APIs for 'punchout' functionality when parts were unavailable in inventory.",
-      "Coordinating development with diverse stakeholders, including executives and global leaders.",
+      "Synchronizing large-scale data across global databases.",
+      "Designing adaptable multi-level approval workflows.",
+      "Integrating external APIs for seamless procurement processes.",
+      "Collaborating with global stakeholders to align technical and business goals."
     ],
-    myRole: "As a Full-Stack Developer and Consultant, I led the design and implementation of critical platform features, including:",
+    myRole: "Led the end-to-end design and implementation of platform features, including backend integration and UI development.",
     roleDetails: [
-      "Architecting the backend to integrate Snowflake database and API/webhook functionality.",
-      "Implementing dynamic UI components to display real-time inventory data and create requisitions.",
-      "Designing approval workflows with complex routing logic based on organizational hierarchy and region-specific rules.",
-      "Participating in bi-weekly calls with global teams to align technical progress with business requirements.",
+      "Architected backend systems with Snowflake and API/webhook functionality.",
+      "Developed dynamic UIs to facilitate inventory search and requisitions.",
+      "Designed approval workflows tailored to regional policies and organizational hierarchy.",
+      "Facilitated cross-team collaboration through regular global stakeholder meetings."
     ],
     keyAchievements: [
-      "Reduced inventory lookup time by 50% and streamlined requisition approvals.",
-      "Delivered a robust, scalable architecture capable of handling tens of thousands of inventory records across regions.",
-      "Improved decision-making and reduced downtime for procurement teams in multiple countries.",
+      "Reduced inventory lookup time by 50%.",
+      "Delivered a scalable architecture managing tens of thousands of records.",
+      "Enhanced procurement efficiency and decision-making across regions."
     ],
-    technologies: ["Snowflake", "SQL", "APIs", "Webhooks", "JavaScript", "React"],
+    technologies: ["Snowflake", "SQL", "APIs", "Webhooks", "JavaScript", "React"]
   },
   {
     title: "Innovation Platform for Large-Scale Funding",
-    description: "A global organization required an innovative platform to support funding for high-impact projects, including those tied to critical industries like national defense. The app facilitated data visualization, tracking, and communication between teams, enabling project proposals to secure funding efficiently.",
+    description: "Built a platform for a global organization to streamline funding processes for high-impact projects. Enabled efficient tracking, visualization, and team collaboration to secure critical funding.",
     challenges: [
-      "Building a pixel-perfect, user-friendly frontend aligned with complex UI/UX designs.",
-      "Integrating APIs to exchange data between the frontend and internal reporting systems.",
-      "Ensuring the platform met strict performance and reliability standards for high-profile stakeholders.",
+      "Creating a user-friendly frontend aligned with complex UI/UX designs.",
+      "Ensuring seamless data integration between frontend and backend.",
+      "Meeting strict reliability standards for high-profile stakeholders."
     ],
-    myRole: "As the Frontend Lead Developer, I:",
+    myRole: "Led frontend development to create a responsive, intuitive interface.",
     roleDetails: [
-      "Designed and implemented a responsive UI in React using Ant Design.",
-      "Collaborated closely with UI designers to ensure an exact match to the design specs.",
-      "Developed and consumed APIs to integrate the frontend with backend SQL databases for seamless data exchange.",
+      "Designed and implemented a responsive UI using React and Ant Design.",
+      "Collaborated with designers to achieve pixel-perfect interfaces.",
+      "Developed APIs for seamless data exchange with SQL backends."
     ],
     keyAchievements: [
-      "Delivered a high-performance app that helped secure millions in project funding.",
-      "Enhanced data accessibility for a government organization, driving efficient decision-making.",
-      "Provided intuitive UX for users navigating complex workflows.",
+      "Delivered a high-performance platform securing millions in project funding.",
+      "Enhanced data accessibility for government and enterprise users.",
+      "Simplified complex workflows for improved user experiences."
     ],
-    technologies: ["React", "Ant Design", "APIs", "SQL"],
+    technologies: ["React", "Ant Design", "APIs", "SQL"]
   },
   {
     title: "Production Management System for Textile Manufacturing",
-    description: "A textile manufacturer sought to streamline their production process, from raw materials to post-production audits. A key feature was enabling dynamic updates to material substitutions and program changes integrated with their enterprise system.",
+    description: "Created a production management app to optimize processes from raw materials to post-production audits. Integrated with enterprise systems to enable real-time updates and improve operational efficiency.",
     challenges: [
-      "Handling large-scale datasets from production pipelines.",
-      "Ensuring seamless integration with Infor M3 for real-time updates.",
+      "Managing large-scale datasets from production pipelines.",
+      "Ensuring real-time integration with enterprise systems."
     ],
-    myRole: "As the Lead Developer, I:",
+    myRole: "Designed and developed core application features to support dynamic updates and accurate data synchronization.",
     roleDetails: [
-      "Designed and implemented a dynamic UI for managing program updates, item conversions, and temporary substitutions.",
-      "Created the SQL database structure to handle complex data relationships.",
-      "Developed API logic to synchronize changes with Infor M3 and tested records in production for accuracy.",
-      "Acted as the primary client contact, providing updates and leading bi-weekly demos.",
+      "Built dynamic UIs for managing material and production updates.",
+      "Designed robust SQL database structures for complex data relationships.",
+      "Developed APIs to synchronize with enterprise systems and ensure accuracy."
     ],
     keyAchievements: [
-      "Reduced manual update time by automating workflows, improving accuracy and efficiency.",
-      "Delivered a user-friendly app that scaled with production needs.",
+      "Reduced manual update times and improved data accuracy.",
+      "Delivered a scalable solution tailored to evolving production needs."
     ],
-    technologies: ["SQL", "Data Lake", "Infor M3", "APIs"],
+    technologies: ["SQL", "Data Lake", "Infor M3", "APIs"]
   },
   {
     title: "Talent Tracking and Reporting Platform",
-    description: "A global healthcare company required a talent tracking system to evaluate internal candidates for leadership roles. Additionally, the system needed to provide dynamic reporting on key workforce metrics.",
+    description: "Developed a system for a global healthcare organization to evaluate leadership candidates and automate workforce forecasting. Provided real-time insights and streamlined reporting processes.",
     challenges: [
-      "Designing and implementing advanced data visualization tools for real-time insights.",
-      "Managing a large-scale data migration from legacy systems to a modern platform.",
-      "Automating previously manual forecasting processes for cost centers.",
+      "Implementing advanced data visualizations for actionable insights.",
+      "Migrating legacy data to a modern platform.",
+      "Automating manual forecasting workflows."
     ],
-    myRole: "As the Lead Developer, I:",
+    myRole: "Led development of dashboards and forecasting tools to improve data accessibility and efficiency.",
     roleDetails: [
-      "Designed the reporting dashboard with drilldowns, filters, and dynamic charts (heat maps, pie charts, column charts).",
-      "Built the forecasting app, significantly reducing the time required for headcount data entry.",
-      "Conducted knowledge transfer sessions with a remote team in India, mentoring and leading daily calls.",
-      "Managed production releases and support for hundreds of users.",
+      "Designed interactive dashboards with dynamic visualizations (e.g., heat maps, charts).",
+      "Built forecasting tools to reduce data entry times.",
+      "Mentored remote team members and ensured alignment on technical solutions."
     ],
     keyAchievements: [
-      "Reduced forecasting time from weeks to days with automated processes.",
-      "Improved accuracy of talent tracking and workforce metrics.",
+      "Reduced forecasting time from weeks to days.",
+      "Improved accuracy and efficiency in talent tracking and reporting."
     ],
-    technologies: ["SQL", "Custom UI/UX", "Dynamic charting libraries"],
+    technologies: ["SQL", "Custom UI/UX", "Dynamic charting libraries"]
   },
   {
     title: "Game Day Volunteer Check-In System",
-    description: "A major sports organization required a fast, reliable system to check in volunteers for events. This system needed to streamline volunteer management for game days and special events.",
+    description: "Developed a reliable system for a major sports organization to streamline volunteer check-ins during high-demand events, enhancing efficiency and safety.",
     challenges: [
-      "Handling large-scale check-ins efficiently without bottlenecks.",
-      "Creating a user-friendly interface for quick volunteer verification.",
+      "Optimizing check-in processes for large-scale events.",
+      "Creating a user-friendly interface for volunteer management."
     ],
-    myRole: "As the Main Developer, I:",
+    myRole: "Designed and implemented a scalable solution to manage real-time volunteer check-ins.",
     roleDetails: [
-      "Designed and implemented the app to manage volunteer check-ins in real-time.",
-      "Optimized the backend for scalability during high-demand events.",
+      "Developed an intuitive app to streamline volunteer management.",
+      "Optimized backend systems for performance during peak usage."
     ],
     keyAchievements: [
-      "Accelerated the check-in process, improving the volunteer experience.",
-      "Enhanced overall event efficiency through streamlined workflows.",
+      "Improved event efficiency and volunteer satisfaction.",
+      "Enhanced safety and workflow management during large events."
     ],
-    technologies: ["Custom UI", "SQL"],
-  },
+    technologies: ["Custom UI", "SQL"]
+  }
 ];
+
 
 const Portfolio = () => {
 
