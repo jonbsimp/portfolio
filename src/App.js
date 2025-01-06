@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import 'antd/dist/reset.css'; // Use this for Ant Design v5+
+
 import './App.css';
 import { Layout, Menu } from 'antd';
 import { FaUser, FaBriefcase, FaRegCalendarAlt, FaHome } from 'react-icons/fa';
@@ -12,6 +14,7 @@ import LinkedInRecommendation from './components/LinkedInRecommendation';
 import Calendly from './components/Calendly';
 import Navbar from './components/Navbar';
 import CustomFooter from './components/CustomFooter';
+
 
 
 const { Content, Sider } = Layout;
@@ -48,11 +51,16 @@ function App() {
 
     return (
         <Layout style={{ minHeight: '100vh' }}>
-            {/* Sidebar */}
             <Sider
                 width={80}
-                className="site-layout-background"
-                style={{ position: 'sticky', top: 0, height: '100vh', zIndex: 100 }}
+                className="custom-sidebar"
+                style={{
+                    position: 'sticky',
+                    top: 0,
+                    height: '100vh',
+                    zIndex: 100,
+                    backgroundColor: '#f5f5f5',
+                }}
             >
                 <Menu
                     mode="inline"
