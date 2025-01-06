@@ -233,7 +233,10 @@ body {
 }
 
 .progress-circle {
-  color: #001628 !important;
+  stroke: #001628; /* Replace with the exact blue color */
+  stroke-width: 4;
+  fill: none;
+  transition: stroke-dasharray 0.3s ease;
 }
 
 .project-title {

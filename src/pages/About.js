@@ -25,7 +25,7 @@ export default function About() {
             <Card>
 
                 <Space>
-                    <Row gutter={0} align="middle" style={{ margin: '0' }}>
+                    <Row gutter={0} align="middle" style={{ margin: '0', paddingBottom: '20px' }}>
                         {/* Left Column for Image */}
                         <Col xs={24} sm={10} md={10} style={{ textAlign: 'center', padding: '0' }}>
                             <img
