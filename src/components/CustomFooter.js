@@ -18,10 +18,9 @@ export default function CustomFooter() {
           <a href="https://github.com/jonbsimp" target="_blank" rel="noopener noreferrer" className="footer-link">GitHub</a>
           <a href="https://linkedin.com/in/jonbsimp" target="_blank" rel="noopener noreferrer" className="footer-link">LinkedIn</a>
         </div> */}
-      </div>
-      <div>
+ 
         <p><FaReact /> <AiOutlineAntDesign /></p>
-        <p className="footer-text">React & Ant Design</p>
+        <p style={{ fontSize: '12px' }} className="footer-text">ReactJS & Ant Design</p>
       </div>
     </Footer>
   );
