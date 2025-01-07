@@ -35,7 +35,7 @@ export default function VideoHeader() {
         <hr></hr>
         <br></br>
         <h2 className="header-text">Software Manager, World Traveler, Dog Lover.</h2>
-        <h4 className="header-text"><i>Sometimes when I'm not working I morph into a yogi</i></h4>
+        {/* <h4 className="header-text"><i>Sometimes when I'm not working I morph into a yogi</i></h4> */}
 
         {/* Icons for Email and Resume Download */}
         <div style={{ textAlign: 'center', marginTop: '20px' }}>
