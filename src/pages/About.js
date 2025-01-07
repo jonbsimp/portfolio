@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../App.css';
-import { Layout, Row, Col, Modal, Card, Space, Typography } from "antd";
+import { Layout, Row, Col, Modal, Card, Space, Typography, Divider } from "antd";
 // import Portfolio from './Portfolio';
 // import { FaArrowRight } from 'react-icons/fa';
 
@@ -25,7 +25,7 @@ export default function About() {
             <Card>
 
                 <Space>
-                    <Row gutter={0} align="middle" style={{ margin: '0', paddingBottom: '20px' }}>
+                    <Row gutter={0} align="middle" style={{ margin: '0', paddingBottom: '20px', paddingTop: '20px' }}>
                         {/* Left Column for Image */}
                         <Col xs={24} sm={10} md={10} style={{ textAlign: 'center', padding: '0' }}>
                             <img
@@ -39,14 +39,15 @@ export default function About() {
                                     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
                                     cursor: 'pointer',
                                 }}
-                                onClick={() => showModal('/assets/peru.jpg')} // Click handler to open modal
+                                onClick={() => showModal('/assets/peru.jpg')}
                             />
                         </Col>
 
                         {/* Right Column for Text */}
-                        <Col xs={24} sm={14} md={14} style={{ textAlign: 'left', padding: '0' }}>
+                        <Col xs={24} sm={14} md={14} style={{ textAlign: 'left', paddingRight: '10px' }}>
                             <div className='about-me'>
-                                <Title style={{ fontStyle: 'italic', fontSize: '22px', paddingBottom: '20px' }} >A little bit about me...</Title>
+                                <Title style={{ fontStyle: 'italic', fontSize: '22px', paddingBottom: '5px' }} >A little bit about me...</Title>
+                                <Divider style={{ color: '#f5f5f5' }} />
                                 <h3>
                                     I am a seasoned software development leader and solution architect with extensive experience in delivering tailored
                                     solutions across healthcare, retail, sports, and manufacturing. I specialize in low-code development, database
