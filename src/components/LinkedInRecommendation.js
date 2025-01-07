@@ -76,7 +76,7 @@ const LinkedInRecommendations = () => {
 
   return (
 
-    <Content style={{ paddingLeft: '100px', paddingRight: '100px', paddingBottom: '20px', paddingTop: '20px' }}>
+    <Content style={{ paddingBottom: '20px', paddingTop: '20px' }}>
       <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '20px' }}>
         <Title
           className="linkedin-title"
@@ -88,7 +88,7 @@ const LinkedInRecommendations = () => {
 
       <Swiper
         slidesPerView="auto"
-        spaceBetween={100}  // Space between the cards
+        spaceBetween={150}  // Space between the cards
         loop={true}
         autoplay={{
           delay: 3000,  // Set the autoplay delay to 3 seconds
@@ -118,7 +118,7 @@ const LinkedInRecommendations = () => {
         modules={[Pagination, EffectCoverflow, Mousewheel]}
       >
         {recommendations.map((rec, idx) => (
-          <SwiperSlide key={idx} style={{ width: '400px' }}>
+          <SwiperSlide key={idx} style={{ width: '400px', minWidth: '390px' }}>
             <Card
               hoverable
               style={{
