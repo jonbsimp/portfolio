@@ -1,5 +1,6 @@
 import React from 'react';
 import { Layout } from "antd";
+import { AiOutlineMail, AiOutlineDownload } from "react-icons/ai"; // Import the email and download icons
 import '../App.css';  // Ensure the CSS file is linked properly
 
 const { Content } = Layout;
@@ -34,8 +35,35 @@ export default function VideoHeader() {
         <br></br>
         <h2 className="header-text">Software Manager, World Traveler, Animal Lover.</h2>
         <h4 className="header-text"><i>When I'm not writing code I morph into a yogi</i></h4>
+
+        {/* Icons for Email and Resume Download */}
+        <div style={{ textAlign: 'center', marginTop: '20px' }}>
+          {/* Email Icon */}
+          <a
+            href="mailto:jonbsimp@gmail.com"
+            style={{
+              color: 'white',
+              textDecoration: 'none',
+              fontSize: '24px',
+              marginRight: '15px',
+            }}
+          >
+            <AiOutlineMail style={{ verticalAlign: 'middle', fontSize: '2rem' }} />
+          </a>
+          {/* Download Icon */}
+          <a
+            href="/assets/Jon_Simpson_Resume.pdf" // Replace with the correct path to your resume
+            download="Jon_Simpson_Resume.pdf" // Sets the download file name
+            style={{
+              color: 'white',
+              textDecoration: 'none',
+              fontSize: '24px',
+            }}
+          >
+            <AiOutlineDownload style={{ verticalAlign: 'middle', fontSize: '2rem' }} />
+          </a>
+        </div>
       </div>
-     
     </Content>
   );
 }
