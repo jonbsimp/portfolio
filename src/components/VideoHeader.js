@@ -33,7 +33,7 @@ export default function VideoHeader() {
         <h1 className="header-text">JON SIMPSON</h1>
         <br></br>
         <hr></hr>
-        <br></br>
+        {/* <br></br> */}
         <h2 className="header-text">Software Manager, World Traveler, Dog Lover.</h2>
         {/* <h4 className="header-text"><i>Sometimes when I'm not working I morph into a yogi</i></h4> */}
 
