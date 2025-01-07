@@ -29,12 +29,13 @@ export default function VideoHeader() {
       <div className="video-overlay"></div>
 
       <div className="header-overlay">
+        {/* <h1 className="header-text">{"{{JON SIMPSON}}"}</h1> */}
         <h1 className="header-text">JON SIMPSON</h1>
         <br></br>
         <hr></hr>
         <br></br>
         <h2 className="header-text">Software Manager, World Traveler, Animal Lover.</h2>
-        <h4 className="header-text"><i>When I'm not writing code I morph into a yogi</i></h4>
+        <h4 className="header-text"><i>Sometimes when I'm not working I morph into a yogi</i></h4>
 
         {/* Icons for Email and Resume Download */}
         <div style={{ textAlign: 'center', marginTop: '20px' }}>
@@ -63,6 +64,8 @@ export default function VideoHeader() {
             <AiOutlineDownload style={{ verticalAlign: 'middle', fontSize: '2rem' }} />
           </a>
         </div>
+        <br></br>
+        <h4 className="header-text">- San Diego, CA -</h4>
       </div>
     </Content>
   );
