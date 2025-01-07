@@ -7,16 +7,16 @@ const { Header } = Layout;
 export default function Navbar() {
   return (
     <Header style={{ position: 'relative', zIndex: 10, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-      {/* <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
         <span style={{
-          color: 'lightblue',
+          color: '#5BC0EB',
           fontSize: '24px', // Adjust size as needed
           fontWeight: 'bold',
-          fontFamily: "'Pacifico', cursive" // Replace with your desired font
+          fontFamily: "'Bungee', san-serif" // Replace with your desired font
         }}>
           &lt;JS /&gt;
         </span>
-      </div> */}
+      </div>
       <Menu theme="dark" mode="horizontal" style={{ flex: 1 }}>
         <Menu.Item key="1">
           {/* <img src="/assets/logo.png" alt="Logo" style={{ height: '30px' }} /> */}
