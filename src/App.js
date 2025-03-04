@@ -7,9 +7,9 @@ import { TbTimeline } from "react-icons/tb";
 import { GoCodeReview } from "react-icons/go";
 import VideoHeader from './components/VideoHeader';
 import About from './pages/About';
-import Portfolio from './pages/Portfolio';
-import Timeline from './pages/Timeline';
-import LinkedInRecommendation from './components/LinkedInRecommendation';
+
+
+
 import Calendly from './components/Calendly';
 import Navbar from './components/Navbar';
 import CustomFooter from './components/CustomFooter';
