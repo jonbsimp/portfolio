@@ -22,9 +22,6 @@ function App() {
             const sections = [
                 { id: 'home', key: '1' },
                 { id: 'about', key: '2' },
-                { id: 'portfolio', key: '3' },
-                { id: 'timeline', key: '4' },
-                { id: 'linkedin-recommendation', key: '5' },
                 { id: 'calendar', key: '6' },
             ];
 
@@ -79,9 +76,6 @@ function App() {
                     <Menu.Item key="2" icon={<FaUser size={24} />} style={{ marginBottom: '20px' }}>
                         <a href="#about" aria-label="Go to About Section"></a>
                     </Menu.Item>
-            
-                
-                  
                     <Menu.Item key="6" icon={<FaRegCalendarAlt size={24} />} style={{ marginBottom: '20px' }}>
                         <a href="#calendar" aria-label="Go to Calendar Section"></a>
                     </Menu.Item>
