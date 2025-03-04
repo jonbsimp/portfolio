@@ -105,15 +105,6 @@ function App() {
                     <div id="about">
                         <About />
                     </div>
-                    <div id="portfolio">
-                        <Portfolio />
-                    </div>
-                    <div id="timeline">
-                        <Timeline />
-                    </div>
-                    <div id="linkedin-recommendation">
-                        <LinkedInRecommendation />
-                    </div>
                     <div id="calendar">
                         <Calendly />
                     </div>
