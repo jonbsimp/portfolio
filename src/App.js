@@ -2,9 +2,7 @@ import React, { useState, useEffect } from 'react';
 // import 'antd/dist/antd.css'; 
 import './App.css';
 import { Layout, Menu } from 'antd';
-import { FaUser, FaBriefcase, FaRegCalendarAlt, FaHome } from 'react-icons/fa';
-import { TbTimeline } from "react-icons/tb";
-import { GoCodeReview } from "react-icons/go";
+import { FaUser, FaRegCalendarAlt, FaHome } from 'react-icons/fa';
 import VideoHeader from './components/VideoHeader';
 import About from './pages/About';
 
@@ -81,15 +79,9 @@ function App() {
                     <Menu.Item key="2" icon={<FaUser size={24} />} style={{ marginBottom: '20px' }}>
                         <a href="#about" aria-label="Go to About Section"></a>
                     </Menu.Item>
-                    <Menu.Item key="3" icon={<FaBriefcase size={24} />} style={{ marginBottom: '20px' }}>
-                        <a href="#portfolio" aria-label="Go to Portfolio Section"></a>
-                    </Menu.Item>
-                    <Menu.Item key="4" icon={<TbTimeline size={24} />} style={{ marginBottom: '20px' }}>
-                        <a href="#timeline" aria-label="Go to Timeline Section"></a>
-                    </Menu.Item>
-                    <Menu.Item key="5" icon={<GoCodeReview size={24} />} style={{ marginBottom: '20px' }}>
-                        <a href="#linkedin-recommendation" aria-label="Go to LinkedIn Review Section"></a>
-                    </Menu.Item>
+            
+                
+                  
                     <Menu.Item key="6" icon={<FaRegCalendarAlt size={24} />} style={{ marginBottom: '20px' }}>
                         <a href="#calendar" aria-label="Go to Calendar Section"></a>
                     </Menu.Item>
@@ -126,9 +118,6 @@ function App() {
                 >
                     <Menu.Item key="1" icon={<FaHome size={18} />} ><a href="#home" aria-label="Go to Home Section"></a></Menu.Item>
                     <Menu.Item key="2" icon={<FaUser size={18} />} ><a href="#about" aria-label="Go to About Section"></a></Menu.Item>
-                    <Menu.Item key="3" icon={<FaBriefcase size={18} />} ><a href="#portfolio" aria-label="Go to Portfolio Section"></a></Menu.Item>
-                    <Menu.Item key="4" icon={<TbTimeline size={18} />} ><a href="#timeline" aria-label="Go to Timeline Section"></a></Menu.Item>
-                    <Menu.Item key="5" icon={<GoCodeReview size={18} />} ><a href="#linkedin-recommendation" aria-label="Go to LinkedIn Review Section"></a></Menu.Item>
                     <Menu.Item key="6" icon={<FaRegCalendarAlt size={18} />} ><a href="#calendar" aria-label="Go to Calendar Section"></a></Menu.Item>
                 </Menu>
             </div>
